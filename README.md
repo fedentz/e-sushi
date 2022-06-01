@@ -12,6 +12,8 @@ Samurai:
 http://www.samuraisushi.com.ar/
 Otaku:
 https://otakusushi.com.ar/
+Sushipop:
+https://www.sushipop.com.ar/cuenta/login
 
 Figma:
 https://www.figma.com/file/LzywRyjHIPGIaSQh1cBv0G/e-sushi?node-id=0%3A1
