@@ -10,3 +10,9 @@ Fabric:
 https://fabricsushi.com.ar/
 Samurai:
 http://www.samuraisushi.com.ar/
+Otaku:
+https://otakusushi.com.ar/
+
+Figma:
+https://www.figma.com/file/LzywRyjHIPGIaSQh1cBv0G/e-sushi?node-id=0%3A1
+
