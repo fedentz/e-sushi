@@ -1,0 +1,48 @@
+header{
+    background-color: black;
+    color: white
+}
+
+.burger{
+    color: white;
+    background-color: black;
+    font-size: 2em;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.navbar{
+    display: none;
+}
+
+footer{
+    background-color: black;
+}
+
+footer p{
+    color: white;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.social{
+    font-size: 2em;
+    color: white;
+}
+
+.boton-pedido{
+    background-color: black;
+    color: white;
+    border: solid 1px darkred;
+    border-radius: 50%;
+}
+
+@media (min-width: 717px) {
+
+    .burger{
+        display:none
+    }
+    .navbar{
+        display:flex;
+    }
+}
