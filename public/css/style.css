@@ -1,14 +1,23 @@
 header{
     background-color: black;
-    color: white
+    color: white;
+    position: sticky;
+    top:0%;
+    left: 0%;
+    right: 0%;
+    z-index: 3;
 }
-
+.burger-menu{
+    padding-bottom: 10px;
+    text-align: center;
+}
 .burger{
     color: white;
     background-color: black;
     font-size: 2em;
     border-radius: 5px;
     border: 1px solid white;
+    text-align: center;
 }
 
 .navbar{
@@ -27,22 +36,50 @@ footer p{
 
 .social{
     font-size: 2em;
-    color: white;
+    margin-left: 5%;
 }
-
+footer{
+    position: relative;
+    padding-bottom: 5px;
+}
 .boton-pedido{
     background-color: black;
     color: white;
     border: solid 1px darkred;
     border-radius: 50%;
+    position: absolute;
+    right: 10%;
+    top: -10%;
+    z-index: 3;
 }
-
+.footer-box{
+    padding-top: 15px;
+    display: flex;
+    margin-left: 30%;
+}
+.logo{
+    width: 35%;
+    height: 100%;
+    padding: 0%;
+    margin: 0;
+}
+footer{
+bottom: 0;
+}
 @media (min-width: 717px) {
 
     .burger{
         display:none
     }
+    .header-caja-madre{
+        display: flex;
+        justify-content: space-between;
+    }
     .navbar{
-        display:flex;
+        display:inline;
+        margin-right: 15px;
+    }
+    .navbar li{
+        display: inline;
     }
 }
