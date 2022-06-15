@@ -24,15 +24,18 @@
     </header>
     
     <body>
-        <form class="ingresar" action="login" method="POST">
+        <article class="log-in">
+        <form class="ingresar" action="login" method="POST">Iniciar Sesión
             <label for="nombre de usuario" ></label>
             <input  class="llenar" type="text" id="nombre de usuario" name="nombre de usuario" placeholder="Nombre de usuario" required minlength="4"> 
             <label for="password" ></label>
             <input class="llenar" type="password" id="password" name="password" placeholder="Elegí tu contraseña" required minlength="8"> 
             <label for="enviar" ></label>
             <input  class="enviar-boton" type="submit" id="enviar" name="enviar"> 
+            <div> No tengo cuenta, <a class="registro" href="./registro.html" > registrarme</a></div> 
         </form>
-        
+
+    </article>
         <footer>
             <section class="footer-box">
                 <div class="social"><a href="facebook.com/e-sushi" style="color: white; text-decoration: none;"><i class="fab fa-facebook"></i></a></div>
