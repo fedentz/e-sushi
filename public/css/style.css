@@ -24,9 +24,7 @@ header{
     display: none;
 }
 
-footer{
-    background-color: black;
-}
+
 
 footer p{
     color: white;
@@ -38,44 +36,44 @@ footer p{
     font-size: 2em;
     margin-left: 5%;
 }
-footer{
-    position: relative;
-    padding-bottom: 5px;
-}
+
 .boton-pedido{
     background-color: black;
     color: white;
     border: solid 1px darkred;
     border-radius: 50%;
     position: absolute;
-    right: 10%;
-    top: -10%;
+    right: 4%;
+    top: -30%;
     z-index: 3;
+    width: 80px;
+    height: 80px;
 }
 .footer-box{
     padding-top: 15px;
     display: flex;
-    margin-left: 3
+    align-items: center;
+    justify-content: center;
 }
 .logo{
     width: 35%;
     height: 100%;
     padding: 0%;
     margin: 0;
-}
-footer{
-bottom: 0;
 } 
-
 .log-in{
-    border: solid green ;
+  
     padding: 5px;
     flex-wrap: wrap;
    display: flex;
-   width: 70%;
+   width: 80%;
    margin: auto;
    justify-content: center;
    align-items: center;
+   margin-top: 15px;
+  
+   height: 100%;
+
 }
 .ingresar{
     align-items: center;
@@ -84,21 +82,39 @@ bottom: 0;
     justify-content: center;
     margin: auto;
     text-align: center;
-    border: solid salmon;
+   
     padding: 15px;
+    margin-top: 5px;
+    width: 100%;
+    height: 100%;
 }
 .llenar{
- border: solid blue;
- margin: 10px;
  align-items: center;
  justify-content: center;
  padding: 10px;
  text-align: center;
+ width: 70%;
+ border: none;
+ display: flex;
+
+ margin: auto;
+ margin-top: 10px;
 }
 footer{
 position: absolute;
+bottom: 0;
+right: 0;
+left: 0;
 width: 100%;
 padding-bottom: 10px;
+background-color: black;
+justify-content: center;
+text-align: center;
+align-items: center;
+
+}
+.enviar-boton{
+    margin: 10px;
 }
 .registro{
     color: red;
@@ -108,68 +124,23 @@ padding-bottom: 10px;
 .eventos-texto{
     text-align: center;
 }
-.registro-full{
-    margin-left: 20px;
-    margin-right: 20px;
-    background-color: #ebebeb;
-    text-align: center;
-}
-#registro-facebook{
-    justify-content: center;
-    margin-top:10px;
-    font-size: 10px;
-    text-align: center;
-    align-items: center;
-    background-color: blue;
-    width: 73%;
-    color: white;
-    padding: 10px;
-    border: none;
-    display: flex;
-    margin: auto;
-    gap: 7px;
-}
-#registro-name{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: none;
-    padding: 10px;
-    width: 60%;
-}
-#registro-mail{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: none;
-    padding: 10px;
-    width: 60%;
-}
-#registro-mail-2{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: none;
-    padding: 10px;
-    width: 60%;
-}
-#registro-password{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: none;
-    padding: 10px;
-    width: 60%;
-}
-#registro-p{
-    font-size: 12px;
-}
-#registro-button{
-    padding: 15px;
-    color: white;
-    background-color: black;
-    border: none;
-    width: 70%;
-    width: 60%;
+.facebook-boton{
+justify-content: center;
+margin-top:10px;
+font-size: 10px;
+text-align: center;
+align-items: center;
+background-color: blue;
+width: 73%;
+color: white;
+padding: 10px;
+border: none;
+display: flex;
+margin: auto;
+gap: 7px;
 }
 
-@media (min-width: 717px) {
+@media (min-width: 768px) {
 
     .burger{
         display:none
@@ -197,8 +168,10 @@ padding-bottom: 10px;
     .eventos-img{
         width: 50%;
     }
-    .registro-full{
-        margin-left: 200px;
-        margin-right: 200px;
+ .background-login{
+        background-image: url(/grupo_8_e-sushi/public/images/sushi-fondo.jpeg);
+        background-attachment: fixed;
     }
+
+
 }
