@@ -55,7 +55,7 @@ footer{
 .footer-box{
     padding-top: 15px;
     display: flex;
-    margin-left: 30%;
+    margin-left: 3
 }
 .logo{
     width: 35%;
@@ -108,6 +108,67 @@ padding-bottom: 10px;
 .eventos-texto{
     text-align: center;
 }
+.registro-full{
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #ebebeb;
+    text-align: center;
+}
+#registro-facebook{
+    justify-content: center;
+    margin-top:10px;
+    font-size: 10px;
+    text-align: center;
+    align-items: center;
+    background-color: blue;
+    width: 73%;
+    color: white;
+    padding: 10px;
+    border: none;
+    display: flex;
+    margin: auto;
+    gap: 7px;
+}
+#registro-name{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    padding: 10px;
+    width: 60%;
+}
+#registro-mail{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    padding: 10px;
+    width: 60%;
+}
+#registro-mail-2{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    padding: 10px;
+    width: 60%;
+}
+#registro-password{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    padding: 10px;
+    width: 60%;
+}
+#registro-p{
+    font-size: 12px;
+}
+#registro-button{
+    padding: 15px;
+    color: white;
+    background-color: black;
+    border: none;
+    width: 70%;
+    width: 60%;
+}
+
 @media (min-width: 717px) {
 
     .burger{
@@ -136,5 +197,8 @@ padding-bottom: 10px;
     .eventos-img{
         width: 50%;
     }
-
+    .registro-full{
+        margin-left: 200px;
+        margin-right: 200px;
+    }
 }
