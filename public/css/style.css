@@ -2,14 +2,46 @@ header{
     background-color: black;
     color: white;
     position: sticky;
-    top:0%;
-    left: 0%;
-    right: 0%;
+    top:0;
+    left: 0;
+    right: 0;
     z-index: 3;
+    width: 100%;
 }
+article{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.body-menu{
+    background-color: black;
+}
+ .imagen-producto{
+    width: 90%;
+    margin:  auto;
+    text-align: center;
+ }
+
+ .blackbg{
+     background-color: black;
+     color: #ebebeb;
+     background-color: black;
+ }
+ .whitebg{
+     background-color: white;
+ }
+ .productos{
+     text-align: center;
+ }
+body{
+    margin: 0;
+    padding: 0;
+}
+
 .burger-menu{
     padding-bottom: 10px;
     text-align: center;
+    margin: 0 auto;
 }
 .burger{
     color: white;
@@ -38,17 +70,22 @@ footer p{
 }
 
 .boton-pedido{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 1;
     background-color: black;
     color: white;
     border: solid 1px darkred;
     border-radius: 50%;
-    position: absolute;
     right: 4%;
     top: -30%;
     z-index: 3;
     width: 80px;
     height: 80px;
 }
+
 .footer-box{
     padding-top: 15px;
     display: flex;
@@ -101,7 +138,7 @@ footer p{
  margin-top: 10px;
 }
 footer{
-position: absolute;
+position: relative;
 bottom: 0;
 right: 0;
 left: 0;
@@ -139,6 +176,7 @@ display: flex;
 margin: auto;
 gap: 7px;
 }
+
 
 .registro-full{
     margin-left: 20px;
