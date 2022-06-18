@@ -3,6 +3,7 @@ html {
     min-height: 100%;
 }
 
+
 header{
     background-color: black;
     color: white;
@@ -13,6 +14,25 @@ header{
     z-index: 3;
     width: 100%;
 }
+.header-mobile{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;    
+   
+}
+.burger-menu{
+    padding-bottom: 10px;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: flex-start;
+    width: 30%;
+
+}
+.header-caja-madre{
+   align-items: center;
+   width: 70%;
+}
+
 article{
     width: 90%;
     margin: 0 auto;
@@ -43,11 +63,7 @@ body{
     padding: 0;
 }
 
-.burger-menu{
-    padding-bottom: 10px;
-    text-align: center;
-    margin: 0 auto;
-}
+
 .burger{
     color: white;
     background-color: black;
@@ -60,9 +76,22 @@ body{
 .navbar{
     display: none;
 }
-
-
-
+.blackbg .ver-mas-boton {
+    background-color: #000000;
+    border-right:solid white;
+    border-left: white solid ;
+    color: white;
+    border-top: none;
+    border-bottom: none;
+}
+.whitebg .ver-mas-boton {
+    background-color: #ffffff;
+    border-right:solid #000000;
+    border-left: #000000 solid ;
+    color: #000000;
+    border-top: none;
+    border-bottom: none;
+}
 footer p{
     color: white;
     font-style: italic;
@@ -98,7 +127,7 @@ footer p{
     justify-content: center;
 }
 .logo{
-    width: 35%;
+    width: 45%;
     height: 100%;
     padding: 0%;
     margin: 0;
@@ -154,7 +183,7 @@ background-color: black;
 justify-content: center;
 text-align: center;
 align-items: center;
-
+margin-top: 5%;
 }
 .enviar-boton{
     margin: 10px;
@@ -317,20 +346,38 @@ gap: 7px;
 
 @media (min-width: 768px) {
 
-    .burger{
+    .burger-menu{
         display:none
     }
     .header-caja-madre{
         display: flex;
         justify-content: space-between;
+        width: 100%;
+    }
+    .logo{
+        width: 35%;
     }
     .navbar{
-        display:inline;
         margin-right: 15px;
+        display: flex;
+        width: 50%;
+        justify-content: flex-end;
     }
-    .navbar li{
-        display: inline;
+    .navbar li {
+        color: white;
+        display:inline;
+        margin: 0 15px;
     }
+    .navbar li :hover{
+        transition: all 400ms;
+        color: red;
+        border-bottom: red solid;
+    }
+    .navbar a{
+        color: white;
+        text-decoration: none; 
+    }
+
     .main-eventos{
         width: 100%;
         height: 100%;
