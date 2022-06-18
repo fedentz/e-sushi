@@ -13,19 +13,53 @@
         <a href="/"><img class="logo" src="images/logoesushi.jpg" alt="Logo" width="100%" height="100%"></a>               
         <section class="navbar">
             <ul style="list-style: none;">
-                <li>Menú</li>
-                <li>Eventos</li>
-                <li>Iniciar Sesión</li>
+                <li><a href="/menu">Menu</a></li>
+                        <li><a href="/eventos">Eventos</a></li>
+                        <li><a href="/login">Iniciar Sesión</a></li>
             </ul>
         </section>
         <div class="burger-menu"><button class="burger"><i class="fas fa-bars"></i></button></div>
     </header>
 
     <main>
-        <div class="cart">
-            <img src="/public/images/FOTOSUSHI13.jpeg" alt="compra" class="photo_cart">
+        <div class="products">
+            <article>
+                <div class="information">
+                    <img src="./images/FOTOSUSHI13.jpeg" alt="compra" class="photo_cart" width="100px" height="100px">
+                    <p class="name">Sushi </p>
+                    <p class="price">$5.000</p>
+                    <p class="delivery">¡Envio Gratis!</p>
+                    <p class="quantitiy">2</p>
+                </div>
+            </article>
+            <article>
+                <div class="information">
+                    <img src="./images/FOTOSUSHI8.jpeg" alt="compra" class="photo_cart" width="100px" height="100px">
+                    <p class="name">Sushi </p>
+                    <p class="price">$5.000</p>
+                    <p class="delivery">¡Envio Gratis!</p>
+                    <p class="quantitiy">2</p>
+                </div>
+            </article>
+            <article>
+                <div class="information">
+                    <img src="./images/FOTOSUSHI5.jpeg" alt="compra" class="photo_cart" width="100px" height="100px">
+                    <p class="name">Pack sushi </p>
+                    <p class="price">$8.750</p>
+                    <p class="delivery">¡Envio Gratis!</p>
+                    <p class="quantitiy">1</p>
+                </div>
+
+            </article>
         </div>
-        
+        <div class="cart_final">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h2 >Precio total a pagar: 28.750</h2>
+        </div>
+        <div class="pay">
+            <input type="submit" value="Pagar" class="button" >
+            <input type="submit" value="Vaciar carrito" class="button_red" >
+        </div>
     </main>
 
     <footer>

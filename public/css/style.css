@@ -36,7 +36,7 @@ article{
      background-color: white;
  }
  .productos{
-     text-align: center;
+    text-align: center;
  }
 body{
     margin: 0;
@@ -245,6 +245,76 @@ gap: 7px;
     width: 60%;
 }
 
+.products{
+    margin-left: auto;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-right: auto;
+}
+.information{
+    width: 175%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+    margin-right: 175px;
+
+}
+.name{
+    width: 10%;
+    margin-left: 2%;
+    text-align: center;
+}
+.price{
+    width: 10%;
+    text-align: center;
+}
+.delivery{
+    width: 10%;
+    text-align: center;
+}
+.quantitiy{
+    width: 10%;
+    background-color: #b3b6b2f6;
+    text-align: center;
+}
+
+.cart_final{
+    text-align: left;
+    margin-left: 1%;
+}
+.pay{
+    text-align: right;
+    margin-bottom: 40px;
+    margin-right: 3%;
+
+}
+.button{
+    background-color: #000000;
+    color: white;
+    position: relative;
+    right: 13%;
+    outline: none;
+    border-radius: 10px;
+
+}
+.button_red{
+    background-color: rgb(182, 13, 13);
+    color: white;
+    position: relative;
+    right: 13%;
+    outline: none;
+    border-radius: 10px;
+    margin-left: 1%;
+
+}
+
 @media (min-width: 768px) {
 
     .burger{
@@ -277,6 +347,27 @@ gap: 7px;
         background-image: url(/grupo_8_e-sushi/public/images/sushi-fondo.jpeg);
         background-attachment: fixed;
     }
+.blackbg{
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+gap: 4%;
+justify-content: center;
+}
+
+.whitebg{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4%;
+    justify-content: center;
+    }
+
+.productos{
+    width: 40%;
+    gap: 7px;
+    text-align: center;
+}
 
 
 }
