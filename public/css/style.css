@@ -4,6 +4,13 @@ body{
     flex-direction: column;
 }
 
+html{
+    position: relative ;
+}
+
+main{
+    margin-bottom: 150px;
+}
 
 header{
     background-color: black;
@@ -14,6 +21,7 @@ header{
     right: 0;
     z-index: 3;
     width: 100%;
+    max-height: 250px;
 }
 .header-mobile{
     display: flex;
@@ -27,7 +35,8 @@ header{
     margin: 0 auto;
     justify-content: flex-start;
     width: 30%;
-
+    top: 50%;
+    left: 50%;
 }
 .header-caja-madre{
    align-items: center;
@@ -56,6 +65,7 @@ article{
  }
  .whitebg{
      background-color: white;
+     padding-bottom: 10px;
  }
  .productos{
     text-align: center;
@@ -175,15 +185,17 @@ footer p{
 }
 
 footer{
-bottom: 0;
-margin-top: auto;
 width: 100%;
 padding-bottom: 10px;
 background-color: black;
 justify-content: center;
 text-align: center;
 align-items: center;
-margin-top: 5%;
+bottom: 0;
+left: 0;
+position: absolute;
+max-height: 250px;
+margin-top: auto;
 }
 .enviar-boton{
     margin: 10px;
@@ -343,28 +355,36 @@ gap: 7px;
     margin-left: 1%;
 
 }
-.home-section{
+.home-section1{
     width: 100%;
-}
-
-.foto-home{
-    width: 100%;
-    z-index: 1;
     position: relative;
 }
 
-main section .txt-img-home{
+.home-section1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.home-section1 h1{
     z-index: 2;
     position: absolute;
-    top: 25%;
-    left: 20%;
+    top: 20%;
+    left: 50%;
     color: #ebebeb;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    transform: translate( -50%, -50%);
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .home-section2{
     width: 90%;
 }
 @media (min-width: 768px) {
+
+    header{
+        max-height: 180px;
+    }
 
     .burger-menu{
         display:none
