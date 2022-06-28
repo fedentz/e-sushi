@@ -11,11 +11,6 @@ app.use(express.static(publicPath));
 
 
 app.use('/', mainRoute);
-app.use('/menu', mainRoute)
-app.use('/login', mainRoute);
-app.use('/register', mainRoute)
-app.use('/eventos', mainRoute);
-app.use('/carrito', mainRoute);
 app.use('/producto', productRoute);
 app.use('/add', addRoute);
 
