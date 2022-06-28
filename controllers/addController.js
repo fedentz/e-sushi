@@ -2,9 +2,7 @@ const express = require("express");
 const router = express.Router();
 const path = require("path");
 
-
-router.get('/producto', (req,res) => 
-    res.render("producto.ejs"));
+router.get('/add', (req,res) => 
+    res.render("add.ejs"));
 
 module.exports = router;
-

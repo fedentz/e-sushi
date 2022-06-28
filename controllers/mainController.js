@@ -18,7 +18,7 @@ router.get('/register', (req,res) =>
     res.render("../views/register.ejs"));
 
 router.get('/menu', (req,res) => 
-    res.rener("../views/menu.ejs"));
+    res.render("../views/menu.ejs"));
 
 module.exports = router;
 
