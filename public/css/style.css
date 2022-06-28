@@ -296,6 +296,16 @@ gap: 7px;
     align-items: flex-start;
     margin-right: auto;
 }
+#combinadas{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#ejecutivo{
+    padding-bottom: 15px;
+}
+#entradas{
+    padding-bottom: 45px;
+}
 .information{
     width: 175%;
     display: flex;
