@@ -1,29 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Sushi</title>
-</head>
+    
+    <%- include('./partials/head') %>
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 <body class="body-menu">
-    <header>
-        <div class="header-mobile">
-            <main class="header-caja-madre">
-             <a href="/"><img class="logo" src="./images/logo-e-sushi.png" alt="Logo" ></a>               
-             <section class="navbar">
-                 <ul style="list-style: none;">
-                     <li><a href="/menu">Menu</a></li>
-                     <li><a href="/eventos">Eventos</a></li>
-                     <li><a href="/login">Iniciar Sesión</a></li>
-                 </ul>
-             </section>
-         </main>
-         <div class="burger-menu"><button class="burger"><i class="fas fa-bars"></i></button></div>
-     </div>
-     </header>
+    <%- include('./partials/header') %>
 <main>
     <section class="menu">
         <div class="blackbg">
@@ -84,18 +67,6 @@
         
         
     </main>
-    <footer>
-        <section class="footer-box">
-            <div class="social"><a href="facebook.com/e-sushi" style="color: white; text-decoration: none;"><i class="fab fa-facebook"></i></a></div>
-            <div class="social"><a href="twitter.com/e-sushi" style="color: white; text-decoration: none;"><i class="fab fa-twitter"></i></a></div>
-            <div class="social"><a href="instagram.com/e-sushi" style="color: white; text-decoration: none;"><i class="fab fa-instagram"></i></a></div>
-        </section>
-        <p>Todo el contenido del sitio web (menu, fotografías, información) es propiedad intelectual de E-Sushi.
-            Queda prohibida cualquier copia o reproducción. Ley 11.723.
-        </p>
-        <div>
-            <button class="boton-pedido">Pedi Online!</button>
-        </div>
-    </footer>
+    <%- include('./partials/footer') %>
 </body>
 </html>

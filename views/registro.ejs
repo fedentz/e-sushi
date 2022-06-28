@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <%- include('./partials/head') %>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+<body class="register-body">
+    
+    <%- include('./partials/header') %>
+
+    <main class="registro-mail">
+        <form class="registro-full" action="register" method="POST">
+            <h4 id="registro-titulo">Registrate</h4>
+            <button id="registro-facebook" type="button"><i class="fab fa-facebook"></i> CONECTAR CON FACEBOOK</button><br>   
+            <input type="text" id="registro-name" name="nombre de usuario" placeholder="Nombre de usuario"><br>
+            <input type="email" id="registro-mail" name="email" placeholder="E-mail"><br>
+            <input type="email" id="registro-mail-2" name="email" placeholder="Repetí tu E-mail"><br>
+            <input type="password" id="registro-password" name="password" placeholder="Contraseña"><br>
+            <p id="registro-p">Ya tengo una cuenta, <a class="registro-a-login" href="./login" > iniciar Sesión</a></p>
+            <button id="registro-button" type="button">Registrarme</button><br>
+        </form>
+    </main>
+
+    <%- include('./partials/footer') %>
+</body>
+</html>

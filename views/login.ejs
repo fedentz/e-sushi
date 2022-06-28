@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<%- include('./partials/head') %>
+
+<%- include('./partials/header') %>
+    
+    <body class="background-login">
+        <article class="log-in">
+        <form class="ingresar" action="login" method="POST">INICIAR SESION 
+            <button class="facebook-boton" type="button"><i class="fab fa-facebook"></i> CONECTAR CON FACEBOOK</button>
+            <label for="nombre de usuario" ></label>
+            <input  class="llenar" type="text" id="nombre de usuario" name="nombre de usuario" placeholder="Nombre de usuario" required minlength="4"> 
+            <label for="password" ></label>
+            <input class="llenar" type="password" id="password" name="password" placeholder="Elegí tu contraseña" required minlength="8"> 
+            <label for="enviar" ></label>
+            <input  class="enviar-boton" type="submit" id="enviar" name="enviar"> 
+            <div> No tengo cuenta, <a class="registro" href="./registro" > registrarme</a></div> 
+        </form>
+    </article>
+</div>
+<%- include('./partials/footer') %>
+</html>
