@@ -1,10 +1,10 @@
 const express = require("express");
-const router = express.Router();
 const path = require("path");
 
+const controlador = {
+    product: (req, res) => {
+        res.render('product.ejs');
+    }
+}
 
-router.get('/producto', (req,res) => 
-    res.render("producto.ejs"));
-
-module.exports = router;
-
+module.exports = controlador;
