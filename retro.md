@@ -22,3 +22,15 @@
 
 5. Dejar de hacer mal los push.
 
+## Retrospectiva del Sprint 3
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
