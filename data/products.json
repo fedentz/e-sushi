@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": null,
+        "description": "",
+        "price": 4890,
+        "discount": 24,
+        "category": "Sashimi",
+        "image": null,
+        "type": "en-oferta"
+    },
+    {
+        "id": 2,
+        "name": null,
+        "description": "",
+        "price": 4396,
+        "discount": 35,
+        "category": "Tablas",
+        "image": null,
+        "type": "en-oferta"
+    },
+    {
+        "id": 3,
+        "name": null,
+        "description": "",
+        "price": 1589,
+        "discount": 37,
+        "category": "Rolls",
+        "image": null,
+        "type": "en-oferta"
+    },
+    {
+        "id": 4,
+        "name": null,
+        "description": "",
+        "price": 2729,
+        "discount": 27,
+        "category": "Tablas",
+        "image": null,
+        "type": "nuevo"
+    },
+    {
+        "id": 5,
+        "name": null,
+        "description": "",
+        "price": 3785,
+        "discount": 33,
+        "category": "Veggie",
+        "image": null,
+        "type": "en-oferta"
+    },
+    {
+        "id": 6,
+        "name": null,
+        "description": "",
+        "price": 971,
+        "discount": 10,
+        "category": "Nigiris",
+        "image": null,
+        "type": "en-oferta"
+    }
+]

@@ -1,0 +1,56 @@
+[
+    {
+        "i": 1,
+        "firstname": "Valerie",
+        "lastname": "Pendlebery",
+        "email": "vpendlebery0@nytimes.com",
+        "password": "xRYzIOkBFjxU",
+        "category": "user",
+        "avatar": "user_1.jpg"
+    },
+    {
+        "id": 2,
+        "firstname": "Jae",
+        "lastname": "Riccio",
+        "email": "jriccio1@behance.net",
+        "password": "QPFYAMsL",
+        "category": "user",
+        "avatar": "user_2.jpg"
+    },
+    {
+        "id": 3,
+        "firstname": "Arlen",
+        "lastname": "Turrell",
+        "email": "aturrell2@themeforest.net",
+        "password": "pFwZUhCQ8",
+        "category": "user",
+        "avatar": "user_3.jpg"
+    },
+    {
+        "id": 4,
+        "firstname": "Willyt",
+        "lastname": "Gorvin",
+        "email": "wgorvin3@ycombinator.com",
+        "password": "tJ6V3O2KoP7n",
+        "category": "user",
+        "avatar": "user_4.jpg"
+    },
+    {
+        "id": 5,
+        "firstname": "Jareb",
+        "lastname": "Armatidge",
+        "email": "jarmatidge4@cbslocal.com",
+        "password": "2n7JynFIqnIL",
+        "category": "user",
+        "avatar": "user_5.jpg"
+    },
+    {
+        "id": 6,
+        "firstname": "Thatch",
+        "lastname": "Pittendreigh",
+        "email": "tpittendreigh5@seesaa.net",
+        "password": "8YkyN3mGj",
+        "category": "user",
+        "avatar": "user_6.jpg"
+    }
+]
