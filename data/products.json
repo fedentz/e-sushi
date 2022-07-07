@@ -58,55 +58,5 @@
         "category": "Nigiris",
         "image": null,
         "type": "en-oferta"
-    },
-    {
-        "id": 7,
-        "name": "egegsrewg",
-        "price": null,
-        "discount": null,
-        "category": "in-sale",
-        "description": "gesgesg",
-        "image": "producto-1657157978007.jpg",
-        "type": "egrgwsedgs"
-    },
-    {
-        "id": 8,
-        "name": "fefesfsef",
-        "price": null,
-        "discount": null,
-        "category": "in-sale",
-        "description": "fesfes",
-        "image": "producto-1657158116615.jpg",
-        "type": "fesdfse"
-    },
-    {
-        "id": 9,
-        "name": "NUEVIO",
-        "price": null,
-        "discount": null,
-        "category": "in-sale",
-        "description": "wfwafwa",
-        "image": "producto-1657158740398.jpg",
-        "type": "wfawfwa"
-    },
-    {
-        "id": 10,
-        "name": "IMAGEN IGUAL",
-        "price": null,
-        "discount": null,
-        "category": "in-sale",
-        "description": "dwadwa",
-        "image": "producto-1657158788927.jpg",
-        "type": "dwadwas"
-    },
-    {
-        "id": 11,
-        "name": "Benedetto",
-        "price": null,
-        "discount": null,
-        "category": "in-sale",
-        "description": "waffwafwa",
-        "image": "producto-1657158901801.jpg",
-        "type": "fawfwafwa"
     }
 ]

@@ -44,6 +44,9 @@ const controlador = {
         res.redirect("/products")
 
     },
+    delete:  (req, res) => {
+        asdasdas
+    }
 }
 
 module.exports = controlador;
