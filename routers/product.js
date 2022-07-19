@@ -21,7 +21,8 @@ let storage = multer.diskStorage({
 let upload = multer({ storage: storage })
 // PRODUCTOS
 router.get('/', productController.product);
-router.get('/create', productController.create)
+router.get('/create', productController.create);
+router.get('/:id', productController.product);
 
 // CREATE
 
@@ -30,12 +31,12 @@ router.get('/create', productController.create)
 router.post('/',upload.single("image"), productController.store);
 
 //EDIT 
-router.get('/id:/edit', productController.edit)
+router.get('/:id/edit', productController.edit)
 
 // PUT
 router.put('/:id', productController.edit)
 // DELETE
-router.delete('/:id',productController.delete)
+router.delete('/:id/eliminar',productController.delete)
 
 
 module.exports = router;

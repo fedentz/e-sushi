@@ -11,9 +11,7 @@ const controlador = {
     },
     create: (req, res) => {
         res.render('create.ejs');
-    },
-    edit: (req, res) => {
-        res.render('edit.ejs');
+
     },
     store: (req, res) => {
 
@@ -45,8 +43,21 @@ const controlador = {
 
     },
     delete:  (req, res) => {
-        asdasdas
-    }
+            const IdEliminar = req.params.id;
+            let newProducts = products.filter(function(e){
+              return e.id != IdEliminar;
+          })
+    },
+    edit: (req, res) => {
+		const productId = parseInt(req.params.id,10);
+        let productToEdit = "";
+        for (let i=0; i<=products.length; i++) {
+            if (products[i].id === productId) {
+                productToEdit = products[i]
+                res.render("edit", {productToEdit: productToEdit})
+            } 
+        }
+	},
 }
 
 module.exports = controlador;

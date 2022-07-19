@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": null,
+        "name": "sashimi",
         "description": "",
         "price": 4890,
         "discount": 24,
@@ -41,7 +41,7 @@
     },
     {
         "id": 5,
-        "name": null,
+        "name": "Sushi",
         "description": "",
         "price": 3785,
         "discount": 33,

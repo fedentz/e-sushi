@@ -34,3 +34,14 @@
 
 5. 
 
+## Retrospectiva del Sprint 4
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
