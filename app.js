@@ -4,6 +4,8 @@ const path = require('path');
 const publicPath = path.resolve(__dirname, './public');
 const mainRoute = require('./routers/main.js');
 const productRoute = require('./routers/product.js');
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended:false}));
 
 

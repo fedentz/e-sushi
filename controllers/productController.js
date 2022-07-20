@@ -44,9 +44,10 @@ const controlador = {
     },
     delete:  (req, res) => {
             const IdEliminar = req.params.id;
-            let newProducts = products.filter(function(e){
+           let newProducts = products.filter(function(e){
               return e.id != IdEliminar;
           })
+          
     },
     edit: (req, res) => {
 		const productId = parseInt(req.params.id,10);
