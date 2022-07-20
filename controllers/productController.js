@@ -41,24 +41,30 @@ const controlador = {
 
         res.redirect("/products")
 
-    },
-    delete:  (req, res) => {
-            const IdEliminar = req.params.id;
-           let newProducts = products.filter(function(e){
-              return e.id != IdEliminar;
-          })
-          
-    },
-    edit: (req, res) => {
+    }, edit: (req, res) => {
 		const productId = parseInt(req.params.id,10);
-        let productToEdit = "";
+        let type = ['Tablas combinadas','Rolls','Menu ejecutivo','Sashimis','Entradas','Veggies']
+        let categories = ["En Oferta","Últimos agregados" ];
+        let productToEdit = {};
         for (let i=0; i<=products.length; i++) {
             if (products[i].id === productId) {
-                productToEdit = products[i]
-                res.render("edit", {productToEdit: productToEdit})
+                productToEdit = products[i];
+                console.log('productToEdit: ',productToEdit);
+                res.render("edit", {productToEdit: productToEdit, type:type, categories: categories})
             } 
         }
 	},
+    delete:  (req, res) => {
+        let IdEliminar = req.params.id;
+        let newProducts = products.filter(function(e){
+              return e.id != IdEliminar;
+          })
+        let productsJSON = JSON.stringify(newProducts, null, 4)
+        fs.writeFileSync(productsFilePath, products.JSON)
+        res.redirect('/products')
+        res.send(newProducts);
+          
+    }
 }
 
 module.exports = controlador;
