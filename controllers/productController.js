@@ -13,6 +13,9 @@ const controlador = {
         res.render('create.ejs');
 
     },
+    editView: (req, res) => {
+        res.render('edit.ejs',{productToEdit: productToEdit})
+    },
     store: (req, res) => {
 
         console.log(req.body)
@@ -41,27 +44,27 @@ const controlador = {
 
         res.redirect("/products")
 
-    }, edit: (req, res) => {
+    }, 
+    productToEdit: (req, res) => {
+
 		const productId = parseInt(req.params.id,10);
         let type = ['Tablas combinadas','Rolls','Menu ejecutivo','Sashimis','Entradas','Veggies']
         let categories = ["En Oferta","Últimos agregados" ];
-        let productToEdit = {};
-        for (let i=0; i<=products.length; i++) {
+        let productToEdit;
+        for (let i=0; i<products.length; i++) {
             if (products[i].id === productId) {
-                productToEdit = products[i];
-                console.log('productToEdit: ',productToEdit);
-                res.render("edit", {productToEdit: productToEdit, type:type, categories: categories})
+                productToEdit = products[i]
             } 
         }
+        res.render("edit", {productToEdit: productToEdit, type:type, categories: categories})
 	},
     delete:  (req, res) => {
-        let IdEliminar = req.params.id;
+        let IdEliminar = parseInt(req.params.id,10);
         let newProducts = products.filter(function(e){
               return e.id != IdEliminar;
           })
         let productsJSON = JSON.stringify(newProducts, null, 4)
-        fs.writeFileSync(productsFilePath, products.JSON)
-        res.redirect('/products')
+        fs.writeFileSync(productsFilePath, productsJSON)
         res.send(newProducts);
           
     }

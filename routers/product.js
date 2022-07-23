@@ -30,11 +30,10 @@ router.get('/:id', productController.product);
 
 router.post('/',upload.single("image"), productController.store);
 
-//EDIT 
-router.get('/:id/edit', productController.edit)
+//EDIT PUT
+router.get('/:id/edit', productController.productToEdit)
+router.put('/:id', productController.productToEdit)
 
-// PUT
-router.put('/:id', productController.edit)
 // DELETE
 router.delete('/:id/eliminar',productController.delete)
 
