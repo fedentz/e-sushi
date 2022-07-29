@@ -47,17 +47,47 @@ const controlador = {
     }, 
     productToEdit: (req, res) => {
 
-		const productId = parseInt(req.params.id,10);
+		let productId = parseInt(req.params.id,10);
         let type = ['Tablas combinadas','Rolls','Menu ejecutivo','Sashimis','Entradas','Veggies']
         let categories = ["En Oferta","Últimos agregados" ];
-        let productToEdit;
+        let productToEdit = {};
         for (let i=0; i<products.length; i++) {
             if (products[i].id === productId) {
                 productToEdit = products[i]
-            } 
+                console.log('productToEdit: ', productToEdit);
+                res.render("edit", {productToEdit: productToEdit, type:type, categories: categories})
+            }
         }
-        res.render("edit", {productToEdit: productToEdit, type:type, categories: categories})
-	},
+    },
+        update: (req, res) => {
+            let productID = parseInt(req.params.id, 10);
+            for (let i = 0; i < products.length; i++) {
+                if (products[i].id == productID) {
+                    products[i].id = productID;
+                    products[i].category = req.body.category;
+                    // products[i].image = req.file.filename
+                    products[i].name = req.body.name;
+                    products[i].description = req.body.description;
+                    products[i].discount = req.body.discount;
+                    products[i].price = req.body.price;
+                    products[i].image = req.body.image;
+                    products[i].type = req.body.type;
+                   
+    
+                    function image(){
+                        if(req.file.filename == undefined){
+                            products[i].image = products[i].image
+                        } else {
+                            products[i] = req.file.filename
+                        }
+                    }
+    
+                    let productsJSON = JSON.stringify(products, null, 4)
+                    fs.writeFileSync(productsFilePath, productsJSON)
+                    res.redirect('/products')
+                }
+            }
+        },
     delete:  (req, res) => {
         let IdEliminar = parseInt(req.params.id,10);
         let newProducts = products.filter(function(e){
@@ -65,9 +95,9 @@ const controlador = {
           })
         let productsJSON = JSON.stringify(newProducts, null, 4)
         fs.writeFileSync(productsFilePath, productsJSON)
-        res.send(newProducts);
-          
+        res.redirect('/products')
     }
+ 
 }
 
 module.exports = controlador;

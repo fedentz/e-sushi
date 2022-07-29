@@ -32,7 +32,7 @@ router.post('/',upload.single("image"), productController.store);
 
 //EDIT PUT
 router.get('/:id/edit', productController.productToEdit)
-router.put('/:id', productController.productToEdit)
+router.put('/:id', productController.update)
 
 // DELETE
 router.delete('/:id/eliminar',productController.delete)
