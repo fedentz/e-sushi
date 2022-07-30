@@ -157,7 +157,7 @@ footer p{
    margin: auto;
    justify-content: center;
    align-items: center;
-   margin-top: 15px;
+   margin-top: 175px;
   
    height: 100%;
 
@@ -287,6 +287,7 @@ gap: 7px;
     border: none;
     width: 70%;
     width: 60%;
+    margin-bottom: 5px;
 }
 
 .products{
