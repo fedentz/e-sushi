@@ -46,7 +46,6 @@ header{
    width: 100%;
 }
 
-
 article{
     width: 90%;
     margin: 0 auto;
@@ -78,7 +77,6 @@ body{
     margin: 0;
     padding: 0;
 }
-
 
 .burger{
     color: white;
@@ -229,7 +227,6 @@ display: flex;
 margin: auto;
 gap: 7px;
 }
-
 
 .registro-full{
     margin-left: 20px;
@@ -401,7 +398,69 @@ gap: 7px;
     font-size: 25px;
     margin: 0 auto;
 }
-
+.products-title{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    width: 60%;
+    padding-top: 10px;
+}
+.form-input-edit{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    padding: 10px;
+    width: 60%;
+}
+.buy-now-button-edit{
+    padding: 15px;
+    color: white;
+    background-color: black;
+    border: none;
+    width: 70%;
+    width: 60%;
+    margin-bottom: 5px;
+}
+.buy-now-button-delete{
+    padding: 5px;
+    color: white;
+    background-color: #800000;
+    border: none;
+    width: 40%;
+    margin-bottom: 5px;
+}
+#box-edit{
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #ebebeb;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#titular-edit{
+    text-align: center;
+    width: 100%;
+}
+.descripcion-edit{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.form-edit{
+    padding: 5px;
+}
+.image-edit{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    padding-top: 10px;
+}
+.background-image{
+    background-image: url(/images/_DSC5277.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
 @media (min-width: 768px) {
 
     header{
@@ -482,5 +541,14 @@ justify-content: center;
     width: 40%;
     gap: 7px;
     text-align: center;
+}
+#main-edit{
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+#box-edit{
+    width: 45%;
+    margin: 0 auto;
 }
 }
