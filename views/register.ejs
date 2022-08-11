@@ -3,19 +3,22 @@
     
     <%- include('./partials/head') %>
 
-<!-- <body id="box-edit" class="background-image"> -->
+    <body id="box-edit" class="background-image">
     
     <%- include('./partials/header') %>
 
     <main class="registro-mail">
-        <form method="POST" action="/user/register" enctype="multipart/form-data">
+        <form class="registro-full" method="POST" action="/user/register" enctype="multipart/form-data">
+            <h4 id="registro-titulo">Registrate</h4>
+            <button id="registro-facebook" type="button"><i class="fab fa-facebook"></i> CONECTAR CON FACEBOOK</button><br>
             <div class="row">
                 <div class="col-md-6 my-1">
                     <div class="form group">
-                        <label><b>Nombre completo</b></label>
                         <input 
                         type="text" 
                         name="full_name" 
+                        placeholder="Nombre de usuario"
+                        id="registro-name"
                         class="form-control <%= locals.errors && errors.fullName ? 'is invalid' : null %>"
                         value="<% locals.oldData ? oldData.fullName : null %>">
                         <% if(locals.errors && errors.fullName) { %>
@@ -27,10 +30,11 @@
                 </div> 
                 <div class="col-md-6 my-1">
                     <div class="form group">
-                        <label><b>Correo electronico</b></label>
                         <input
                         type="text" 
                         name="email" 
+                        placeholder="E-mail"
+                        id="registro-mail"
                         class="form-control <%= locals.errors && errors.email ? 'is invalid' : null %>"
                         value="<% locals.oldData ? oldData.fullName : null %>" >
                         <% if(locals.errors && errors.email) { %>
@@ -41,10 +45,11 @@
                     </div>
                 <div class="col-md-6 my-1">
                     <div class="form group">
-                        <label><b>Password</b></label>
                         <input 
                         type="password" 
                         name="password" 
+                        placeholder="Constraseña"
+                        id="registro-password"
                         class="form-control <%= locals.errors && errors.password ? 'is invalid' : null %>"
                         value="<% locals.oldData ? oldData.fullName : null %>">
                         <% if(locals.errors && errors.password) { %>
@@ -73,7 +78,7 @@
                     </div>
                 </div>
                 <div class="col-12 my-3">
-                    <button type="submit" class="btn btn-primary">Register</button>
+                    <button type="submit" id="registro-button" class="btn btn-primary">Registrarme</button>
                 </div>
                 </div>
             </div>
