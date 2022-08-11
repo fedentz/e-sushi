@@ -18,11 +18,11 @@
                         name="full_name" 
                         class="form-control <%= locals.errors && errors.fullName ? 'is invalid' : null %>"
                         value="<% locals.oldData ? oldData.fullName : null %>">
-                        <$ if(locals.errors && errors.fullName) { %>
+                        <% if(locals.errors && errors.fullName) { %>
                             <div class="text-danger">
                                 <%= errors.fullName.msg %>
                             </div>
-                        <$ } %>
+                        <% } %>
                     </div>
                 </div> 
                 <div class="col-md-6 my-1">
@@ -33,11 +33,11 @@
                         name="email" 
                         class="form-control <%= locals.errors && errors.email ? 'is invalid' : null %>"
                         value="<% locals.oldData ? oldData.fullName : null %>" >
-                        <$ if(locals.errors && errors.email) { %>
+                        <% if(locals.errors && errors.email) { %>
                             <div class="text-danger">
                                 <%= errors.email.msg %>
                             </div>
-                        <$ } %>
+                        <% } %>
                     </div>
                 <div class="col-md-6 my-1">
                     <div class="form group">
@@ -47,11 +47,11 @@
                         name="password" 
                         class="form-control <%= locals.errors && errors.password ? 'is invalid' : null %>"
                         value="<% locals.oldData ? oldData.fullName : null %>">
-                        <$ if(locals.errors && errors.password) { %>
+                        <% if(locals.errors && errors.password) { %>
                             <div class="text-danger">
                                 <%= errors.password.msg %>
                             </div>
-                        <$ } %>
+                        <% } %>
                 </div>
                 <div class="col-md-6 my-1">
                     <div class="form-group">
@@ -65,22 +65,11 @@
                             <option value="<%= oneCountry %>" <%= locals.oldData && (oneCountry == oldData.country) ? 'selected' :null %>> <%= oneCountry %> </option>
                             <% } %>
                         </select>
-                        <$ if(locals.errors && errors.country) { %>
+                        <% if(locals.errors && errors.country) { %>
                             <div class="text-danger">
                                 <%= errors.country.msg %>
                             </div>
-                        <$ } %>
-                    </div>
-                </div>
-                <div class="col-md-6 my-1">
-                    <div class="form group">
-                        <label><b>Imagen de Perfil</b></label>
-                        <input type="file" name="avatar" class="form-control" value="<% locals.oldData ? oldData.avatar : null %>">
-                        <$ if(locals.errors && errors.avatar) { %>
-                            <div class="text-danger">
-                                <%= errors.avatar.msg %>
-                            </div>
-                        <$ } %>
+                        <% } %>
                     </div>
                 </div>
                 <div class="col-12 my-3">
