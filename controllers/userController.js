@@ -1,3 +1,5 @@
+const bcryptjs = require("bcryptjs");
+
 const { validationResult } = require('express-validator');
 
 const User = require("../models/User");
@@ -26,5 +28,6 @@ const controller= {
         return res.render('userProfile')
     }, */
 };
+
 
 module.exports = controller
