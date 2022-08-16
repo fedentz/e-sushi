@@ -3,19 +3,42 @@
     
 <%- include('./partials/head') %>
 
-    <body id="box-edit" class="background-image">
+<!--     <body id="box-edit" class="background-image"> -->
         <%- include('./partials/header') %>
         <article class="log-in">
-        <form class="ingresar" action="login" method="POST">INICIAR SESION 
-            <button class="facebook-boton" type="button"><i class="fab fa-facebook"></i> CONECTAR CON FACEBOOK</button>
-            <label for="nombre de usuario" ></label>
-            <input  class="llenar" type="text" id="nombre de usuario" name="nombre de usuario" placeholder="Nombre de usuario" required minlength="4"> 
-            <label for="password" ></label>
-            <input class="llenar" type="password" id="password" name="password" placeholder="Elegí tu contraseña" required minlength="8"> 
-            <label for="enviar" ></label>
-            <input  class="enviar-boton" type="submit" id="enviar" name="enviar"> 
-            <div> No tengo cuenta, <a class="registro" href="./register" > registrarme</a></div> 
-        </form>
+            <form method="POST" action="/user/login">
+                <div class="row">
+                    <div class="col-md-6 my-2">
+                        <div class="form-group">
+                            <label><b>Correo electrónico:</b></label>
+                            <input type="text" name="email" class="form-control">
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="text-danger">
+                                    <%= errors.email.msg %>
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+                    <div class="col-md-6 my-2">
+                        <div class="form-group">
+                            <label><b>Password:</b></label>
+                            <input type="password" name="password" class="form-control">
+                            <div class="invalid-feedback">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 my-2">
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-12 my-3">
+                        <button type="submit" class="btn btn-primary">Loguearme</button>
+                    </div>
+                </div>
+            </form>
     </article>
 </div>
 <%- include('./partials/footer') %>

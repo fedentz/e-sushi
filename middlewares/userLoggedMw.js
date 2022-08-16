@@ -1,4 +1,4 @@
-/* const User = require('../models/User');
+const User = require('../models/User');
 
 function userLoggedMw(req, res, next) {
 	res.locals.isLogged = false;
@@ -18,4 +18,4 @@ function userLoggedMw(req, res, next) {
 	next();
 }
 
-module.exports = userLoggedMw; */
+module.exports = userLoggedMw; 
