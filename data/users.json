@@ -60,5 +60,12 @@
   "email": "federico@fede.com",
   "password": "$2a$10$jenag4GL7R2cAty/RHkBPOleOpNWD6Uf0o1Mj0ZzrrPezQQLg2KOS",
   "country": "Argentina"
+ },
+ {
+  "id": 9,
+  "full_name": "NicolasRead",
+  "email": "nicolas.s.read@gmail.com",
+  "password": "$2a$10$bkUWu06w9pmS//s4b5y08eNuXarWsaJLUUxXlzTACDRpICisdjZn6",
+  "country": "Argentina"
  }
 ]

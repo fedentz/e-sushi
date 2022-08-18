@@ -152,12 +152,11 @@ footer p{
   
     padding: 5px;
     flex-wrap: wrap;
-   display: flex;
-   width: 80%;
-   margin: auto;
-   justify-content: center;
-   align-items: center;
-   margin-top: 175px;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
   
    height: 100%;
 
@@ -204,6 +203,9 @@ margin-top: auto;
 .enviar-boton{
     margin: 10px;
 }
+#registro-titulo{
+    padding-top: 10px;
+}
 .registro{
     color: red;
     text-decoration: none;
@@ -229,6 +231,12 @@ gap: 7px;
 }
 
 .registro-full{
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #ebebeb;
+    text-align: center;
+}
+.login-full{
     margin-left: 20px;
     margin-right: 20px;
     background-color: #ebebeb;
@@ -462,8 +470,33 @@ gap: 7px;
     background-attachment: fixed;
     background-position: center center;
 }
+.background-image-profile{
+    background-image: url(/images/FOTOSUSHI13.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
 .form-group{
     margin-bottom: 10px;
+}
+#text-profile{
+    margin-top: 100px;
+    color: white;
+    text-align: center;
+}
+#button-profile-menu{
+    padding: 10px;
+    color: white;
+    background-color: #800000;
+    border: none;
+    margin-bottom: 5px;
+    border-radius: 15px;
+}
+#div-profile-menu{
+    margin-top: 50px;
+    display: flex;        
+    justify-content: center;
 }
 @media (min-width: 768px) {
 

@@ -3,15 +3,16 @@
     
 <%- include('./partials/head') %>
 
-<!--     <body id="box-edit" class="background-image"> -->
+   <body id="box-edit" class="background-image">
         <%- include('./partials/header') %>
+        <main class="registro-mail">
         <article class="log-in">
-            <form method="POST" action="/user/login">
+            <form class="login-full" method="POST" action="/user/login">
+                <h4 id="registro-titulo">Log in</h4>
                 <div class="row">
                     <div class="col-md-6 my-2">
                         <div class="form-group">
-                            <label><b>Correo electrónico:</b></label>
-                            <input type="text" name="email" class="form-control">
+                            <input type="text" id="registro-name" name="email" placeholder="Correo electrónico" class="form-control">
                             <% if (locals.errors && errors.email) { %>
                                 <div class="text-danger">
                                     <%= errors.email.msg %>
@@ -21,8 +22,7 @@
                     </div>
                     <div class="col-md-6 my-2">
                         <div class="form-group">
-                            <label><b>Password:</b></label>
-                            <input type="password" name="password" class="form-control">
+                            <input type="password" id="registro-name" name="password" placeholder="Contraseña" class="form-control">
                             <div class="invalid-feedback">
                             </div>
                         </div>
@@ -35,11 +35,13 @@
                         </div>
                     </div>
                     <div class="col-12 my-3">
-                        <button type="submit" class="btn btn-primary">Loguearme</button>
+                        <button id="registro-button" type="submit" class="btn btn-primary">Conectarme</button>
                     </div>
                 </div>
             </form>
     </article>
+    </main>
+    </body>
 </div>
 <%- include('./partials/footer') %>
 <%- include('./partials/boton-flotante') %>

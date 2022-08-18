@@ -3,10 +3,15 @@
     
     <%- include('./partials/head') %>
 
-<body>
+<body class="background-image-profile">
     <%- include('./partials/header') %>
-    <main></main>
-    <h2>Hi <%= user.email %> </h2>
+    <main>
+    <h2 id="text-profile">¡Hola, <%= user.full_name %>!</h2>
+    <div id="div-profile-menu">
+    <a href="/menu">
+    <button id="button-profile-menu"><strong>Realiza tu pedido</strong></button>
+    </a>
+    </div>
     </main>
 
     <%- include('./partials/footer') %>
