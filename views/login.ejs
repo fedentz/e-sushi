@@ -3,9 +3,11 @@
     
 <%- include('./partials/head') %>
 
-    <body id="box-edit" class="background-image">
+   <body id="box-edit" class="background-image">
         <%- include('./partials/header') %>
+        <main class="registro-mail">
         <article class="log-in">
+<<<<<<< HEAD
         <form class="ingresar" action="login" method="POST">INICIAR SESION 
             <button class="facebook-boton" type="button"><i class="fab fa-facebook"></i> CONECTAR CON FACEBOOK</button>
             <label for="nombre de usuario" ></label>
@@ -18,7 +20,43 @@
             <input  class="enviar-boton" type="submit" id="enviar" name="enviar"> 
             <div> No tengo cuenta, <a class="registro" href="./register" > registrarme</a></div> 
         </form>
+=======
+            <form class="login-full" method="POST" action="/user/login">
+                <h4 id="registro-titulo">Log in</h4>
+                <div class="row">
+                    <div class="col-md-6 my-2">
+                        <div class="form-group">
+                            <input type="text" id="registro-name" name="email" placeholder="Correo electrónico" class="form-control">
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="text-danger">
+                                    <%= errors.email.msg %>
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+                    <div class="col-md-6 my-2">
+                        <div class="form-group">
+                            <input type="password" id="registro-name" name="password" placeholder="Contraseña" class="form-control">
+                            <div class="invalid-feedback">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 my-2">
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-12 my-3">
+                        <button id="registro-button" type="submit" class="btn btn-primary">Conectarme</button>
+                    </div>
+                </div>
+            </form>
+>>>>>>> d3bf6f065e16ae5bc68c148d3ff8b830e66fb1c5
     </article>
+    </main>
+    </body>
 </div>
 <%- include('./partials/footer') %>
 <%- include('./partials/boton-flotante') %>
