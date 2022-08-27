@@ -11,13 +11,13 @@
     },
     {
         "id": 5,
-        "name": null,
-        "description": "",
-        "price": 971,
-        "discount": 10,
-        "category": "Nigiris",
-        "image": null,
-        "type": "en-oferta"
+        "name": "Tabla de papa",
+        "description": "Paapa",
+        "price": "ioioio",
+        "discount": "23",
+        "category": "in-sale",
+        "image": "",
+        "type": "Tipo"
     },
     {
         "id": 4,

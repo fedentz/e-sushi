@@ -17,7 +17,6 @@ header{
     background-color: black;
     color: white;
     position: sticky;
-   
     z-index: 3;
     width: 100%;
     max-height: 250px;
@@ -44,6 +43,7 @@ header{
    max-height: 150px;
    background-color: #000000;
    width: 100%;
+   left: 0 ;
 }
 
 article{
@@ -205,6 +205,9 @@ margin-top: auto;
 }
 #registro-titulo{
     padding-top: 10px;
+}
+.text-danger{
+    color:rgb(182, 13, 13)
 }
 .registro{
     color: red;
