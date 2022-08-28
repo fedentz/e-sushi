@@ -25,6 +25,7 @@ app.use(session({
 
 app.use(cookies());
 
+
 const mainRoute = require('./routers/main.js');
 const productRoute = require('./routers/product.js');
 const userRoute = require('./routers/userRoutes.js');

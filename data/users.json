@@ -67,5 +67,27 @@
   "email": "nicolas.s.read@gmail.com",
   "password": "$2a$10$bkUWu06w9pmS//s4b5y08eNuXarWsaJLUUxXlzTACDRpICisdjZn6",
   "country": "Argentina"
+ },
+ {
+  "id": 10,
+  "full_name": "natalia sosa",
+  "email": "feliperiva03@hotmail.com",
+  "password": "$2a$10$23Zcb9PBAUUOvXOKsr/bFOKeyuSS9EWhd6YD09l//GJhdx.AL5dI.",
+  "country": "Argentina",
+  "avatar": "pipe presentacion.jpeg"
+ },
+ {
+  "id": 11,
+  "full_name": "natalia sosa",
+  "email": "feliperiva03@gmail.com",
+  "password": "$2a$10$/fhEo3Na4wFGxkQaPFLBWea3Z2F3qzWRbbpN0mvW5PK/7Bk1KpYBG",
+  "country": "Argentina"
+ },
+ {
+  "id": 12,
+  "fullName": "natalia sosa",
+  "email": "feliperiva03@hfotmail.com",
+  "password": "$2a$10$D6idYscJuEbvkgyBUVs0SOUIzmpt3xiYqgpkSmHGlziSrzPDYsFeO",
+  "country": "Argentina"
  }
 ]

@@ -8,7 +8,7 @@
     <%- include('./partials/header') %>
 
     <main class="registro-mail">
-        <form class="login-full" method="POST" action="/user/register">
+        <form class="login-full" method="POST" action="/user/register" enctype="multipart/form-data">
             <h4 id="registro-titulo">Registrate</h4>
             <button id="registro-facebook" type="button"><i class="fab fa-facebook"></i> CONECTAR CON FACEBOOK</button><br>
             <div class="row">
@@ -16,10 +16,10 @@
                     <div class="form group">
                         <input 
                         type="text" 
-                        name="full_name" 
+                        name="fullName" 
                         placeholder="Nombre de usuario"
                         id="registro-name"
-                        class="form-control <%= locals.errors && errors.fullName ? 'is invalid' : null %>"
+                        class="form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>"
                         value="<% locals.oldData ? oldData.fullName : null %>">
                         <% if(locals.errors && errors.fullName) { %>
                             <div class="text-danger">
@@ -35,7 +35,7 @@
                         name="email" 
                         placeholder="E-mail"
                         id="registro-mail"
-                        class="form-control <%= locals.errors && errors.email ? 'is invalid' : null %>"
+                        class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
                         value="<% locals.oldData ? oldData.fullName : null %>" >
                         <% if(locals.errors && errors.email) { %>
                             <div class="text-danger">
@@ -50,7 +50,7 @@
                         name="password" 
                         placeholder="Constraseña"
                         id="registro-password"
-                        class="form-control <%= locals.errors && errors.password ? 'is invalid' : null %>"
+                        class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
                         value="<% locals.oldData ? oldData.fullName : null %>">
                         <% if(locals.errors && errors.password) { %>
                             <div class="text-danger">
@@ -67,7 +67,7 @@
                               let countries = ['Argentina', 'Bolivia', 'Brasil', 'Colombia', 'Chile', 'Ecuador', 'Paraguay', 'Peru', 'Uruguay', 'Venezuela'];
                             %>
                             <% for (const oneCountry of countries) { %> 
-                            <option value="<%= oneCountry %>" <%= locals.oldData && (oneCountry == oldData.country) ? 'selected' :null %>> <%= oneCountry %> </option>
+                            <option value="<%= oneCountry %>" <%= locals.oldData && (oneCountry === oldData.country) ? 'selected' :null %>> <%= oneCountry %> </option>
                             <% } %>
                         </select>
                         <% if(locals.errors && errors.country) { %>
@@ -76,6 +76,20 @@
                             </div>
                         <% } %>
                     </div>
+                </div>
+                <div class="imagen-perfil">
+                    <div class="form-group">
+                        <label><b>Imagen de Perfil:</b></label>
+                        <input class="form-control" type="file" name="avatar">
+                        <div class="invalid-feedback">
+                            <% if(locals.errors && errors.avatar) { %>
+                                <div class="text-danger">
+                                    <%= errors.avatar.msg %>
+                                </div>
+                            <% } %>
+                        </div>
+                     </div>
+                    
                 </div>
                 <div class="col-12 my-3">
                     <button type="submit" id="registro-button" class="btn btn-primary">Registrarme</button>
