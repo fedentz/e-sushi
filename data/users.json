@@ -89,5 +89,13 @@
   "email": "feliperiva03@hfotmail.com",
   "password": "$2a$10$D6idYscJuEbvkgyBUVs0SOUIzmpt3xiYqgpkSmHGlziSrzPDYsFeO",
   "country": "Argentina"
+ },
+ {
+  "id": 13,
+  "fullName": "fede",
+  "email": "federico@prueba.com",
+  "password": "$2a$10$ndnQOJKLoz9RlObnrT6nN.NOgq2cfEAgYNx0vSKQ7X5p0oKaFzqtK",
+  "country": "Brasil",
+  "avatar": "b2a69b80f5f9ea427f13c895fbfeeef3"
  }
 ]

@@ -19,3 +19,4 @@ function userLoggedMw(req, res, next) {
 }
 
 module.exports = userLoggedMw; 
+// 1:28:00 para editar el navbar y el avatar
