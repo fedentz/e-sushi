@@ -20,3 +20,7 @@
 
 https://www.figma.com/file/LzywRyjHIPGIaSQh1cBv0G/e-sushi?node-id=0%3A1
 
+
+# nuestro Trello
+
+https://trello.com/b/OLrWlYG2/tareas

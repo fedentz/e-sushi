@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const fs = require('fs');
+const db = require("../database/models")
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -11,14 +12,16 @@ const controlador = {
     },
     create: (req, res) => {
         res.render('create.ejs');
+        db.Producto.findAll()
+            .then(function(nombre){
+                return res.render('create.ejs',{nombre: nombre}); // PREGUNTAR  
+            })
 
     },
     editView: (req, res) => {
         res.render('edit.ejs',{productToEdit: productToEdit})
     },
     store: (req, res) => {
-
-        console.log(req.body)
         let productoNuevo = {
             id: products.length + 1,
             name: req.body.name,
