@@ -5,7 +5,7 @@ module.exports = function(sequelize,dataTypes){
     let cols = {
         
         id:{
-            type: dataTypes.INT,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
@@ -22,13 +22,13 @@ module.exports = function(sequelize,dataTypes){
             type: dataTypes.STRING
         },
         phone_number:{
-            type: dataTypes.INT
+            type: dataTypes.INTEGER
         },
         image:{
             type: dataTypes.STRING
         },
         id_rol:{
-            type: dataTypes.INT
+            type: dataTypes.INTEGER
         }
     }
 
@@ -40,7 +40,7 @@ module.exports = function(sequelize,dataTypes){
     let Users = sequelize.define(alias,cols,config)
 
     Users.associate = function(models) {
-        Users.belongsTo(models.User, {
+        Users.belongsTo(models.Rol, {
             as: "rol",
             foreignKey: 'rol_id',
             timestamps: false

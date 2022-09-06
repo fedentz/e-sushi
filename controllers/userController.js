@@ -10,6 +10,8 @@ const controller = {
 		return res.render('register');
 	},
 	processRegister: (req, res) => {
+		console.log('req.file:');
+		console.log(req.file);
 		const resultValidation = validationResult(req);
 
 		if (resultValidation.errors.length > 0) {
@@ -31,10 +33,10 @@ const controller = {
 				oldData: req.body
 			});
 		}
-
+let fotoDePerfil = req.file.filename;
 		let userToCreate = {
 			...req.body,
-			avatar: req.file.filename,
+			avatar: fotoDePerfil,
 			password: bcryptjs.hashSync(req.body.password, 10)
 		}
 

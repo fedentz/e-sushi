@@ -1,11 +1,11 @@
 module.exports = function(sequelize,dataTypes){
     
-    let alias = "Payment_method";
+    let alias = "PaymentMethod";
 
     let cols = {
         
         id:{
-            type: dataTypes.INT,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
@@ -19,14 +19,14 @@ module.exports = function(sequelize,dataTypes){
         timeStamps: false
     }
 
-    let Payment_method = sequelize.define(alias,cols,config)
+   let PaymentMethod = sequelize.define(alias,cols,config)
 
-    Payment_method.associate = function(models) {
-        Payment_method.belongsTo(models.Cart, {
+   PaymentMethod.associate = function(models) {
+        PaymentMethod.belongsTo(models.Cart, {
             as: "payment",
             foreignKey: 'payment_method_id',
             timestamps: false
         })
-    }
-    return Payment_method
+    } 
+    return PaymentMethod
 }

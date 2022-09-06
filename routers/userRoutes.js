@@ -5,16 +5,31 @@ const multer = require('multer');
 const { body } = require('express-validator')
 
 
-const storage = multer.diskStorage({
+/* const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null,'./public/images/avatars')
     },
     fileName: (req, file, cb) => {
-        let fileName = `${Date.now()}_img${path.extname(file.originalname)}`;
+        let fileName = `AAA${Date.now()}_img${path.extname(file.originalname)}`;
+        console.log('fileName:',fileName);
         cb(null, fileName)}
-})
+        
+}) */
     
-const uploadFile = multer({storage})
+/* const uploadFile = multer({storage}) */
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, './public/images/avatars')
+    },
+    filename: function (req, file, cb) {
+      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+      var ext = path.extname(file.originalname);
+      cb(null, file.fieldname + '-' + uniqueSuffix + ext )
+    }
+  })
+  
+  const uploadFile = multer({ storage: storage })
 
 
 
@@ -34,13 +49,13 @@ const validations = [
     body('country').notEmpty().withMessage('Tienes que elegir un pais'),
     body('avatar').custom((value,{ req }) => {
         let file = req.file;
-        let acceptedExtension = ['.jpg','.png','.gif'];
+        let acceptedExtension = ['.jpg','.jpeg','.png','.gif'];
        if(!file){
             throw new Error('Tienes que subir una imagen')
         }else {
             let fileExtension = path.extname(file.originalname)
            if (!acceptedExtension.includes(fileExtension)){
-            throw new Error(`Las extensiones de archivo peprmitidas son ${acceptedExtension.join(', ')}`)
+            throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtension.join(', ')}`)
            }
         }
     return true;

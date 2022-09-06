@@ -5,21 +5,21 @@ module.exports = function(sequelize,dataTypes){
     let cols = {
         
         id:{
-            type: dataTypes.INT,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
         total_product:{
-            type: dataTypes.INT
+            type: dataTypes.INTEGER
         },
         total_price:{
-            type: dataTypes.INT
+            type: dataTypes.INTEGER
         },
         payment_methods_id:{
-            type: dataTypes.INT
+            type: dataTypes.INTEGER
         },
         user_id:{
-            type: dataTypes.INT
+            type: dataTypes.INTEGER
         } 
     }
 
@@ -37,13 +37,13 @@ module.exports = function(sequelize,dataTypes){
             timestamps: false
         })
     
-        Cart.hasMany(models.Payment_method, {
-            as: "payment_method",
+        Cart.hasMany(models.PaymentMethod, {
+            as: "paymentMethod",
             foreignKey: 'payment_method_id',
             timestamps: false
         })
         
-        Cart.hasMany(models.Product, {
+        Cart.belongsToMany(models.Product, {
             as: "product",
             through: "cart_product",
             foreignKey: 'product_id',
@@ -51,5 +51,5 @@ module.exports = function(sequelize,dataTypes){
             timestamps: false
         })
     }
-    return Product
+    return Cart
 }

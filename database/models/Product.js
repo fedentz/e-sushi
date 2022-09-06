@@ -5,7 +5,7 @@ module.exports = function(sequelize,dataTypes){
     let cols = {
         
         id:{
-            type: dataTypes.INT,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
@@ -19,16 +19,16 @@ module.exports = function(sequelize,dataTypes){
             type: dataTypes.STRING
         },
         discount:{
-            type: dataTypes.INT
+            type: dataTypes.INTEGER
         },
         image:{
-            type: dataTypes.INT
+            type: dataTypes.INTEGER
         },
         stock:{
             type: dataTypes.STRING
         },
         id_products_category:{
-            type: dataTypes.INT
+            type: dataTypes.INTEGER
         }
     }
 

@@ -11,13 +11,13 @@
     },
     {
         "id": 5,
-        "name": "Tabla de papa",
-        "description": "Paapa",
-        "price": "ioioio",
-        "discount": "23",
+        "name": "Tabla de  niguiris",
+        "description": "adasd",
+        "price": "3500",
+        "discount": "25",
         "category": "in-sale",
-        "image": "",
-        "type": "Tipo"
+        "image": "pipe presentacion.jpeg",
+        "type": "sdsd"
     },
     {
         "id": 4,

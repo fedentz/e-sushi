@@ -97,5 +97,61 @@
   "password": "$2a$10$ndnQOJKLoz9RlObnrT6nN.NOgq2cfEAgYNx0vSKQ7X5p0oKaFzqtK",
   "country": "Brasil",
   "avatar": "b2a69b80f5f9ea427f13c895fbfeeef3"
+ },
+ {
+  "id": 14,
+  "fullName": "sdasdasd",
+  "email": "feliperasdaiva03@hotmail.com",
+  "password": "$2a$10$1TEljveZG0xFcg2aC4CssOPXVaZmOVaMOuWwOcN9aq/T7deCaFARS",
+  "country": "Argentina",
+  "avatar": "pipe presentacion.jpeg"
+ },
+ {
+  "id": 15,
+  "fullName": "felipe rivaaaa",
+  "email": "felipdsderiva03@hotmail.com",
+  "password": "$2a$10$PH1UH9TvdIf0w/ts7/QD8e6Pxmt9ccGAI/LS8BCTZVl3fXSpsHMZ.",
+  "country": "Argentina",
+  "avatar": "pipe presentacion.jpeg"
+ },
+ {
+  "id": 16,
+  "fullName": "dasdasd",
+  "email": "felipsdsdsderiva03@hotmail.com",
+  "password": "$2a$10$w1uSFYeEFuKtpXWIRtum4enuMlDNaHoWuVpfwSZmsyUYlntISG/Kq",
+  "country": "Chile",
+  "avatar": "pipe presentacion.jpeg"
+ },
+ {
+  "id": 17,
+  "fullName": "sdsdsd",
+  "email": "feliperisdsdva03@hotmail.com",
+  "password": "$2a$10$VeQ1QCYwcEn2pNVsHQMORecQmrHq0OM4eC1WXihpKyhBdqWCJ/fX6",
+  "country": "Ecuador",
+  "avatar": "pipe presentacion.jpeg"
+ },
+ {
+  "id": 18,
+  "fullName": "asdad",
+  "email": "felipesadriva03@hotmail.com",
+  "password": "$2a$10$XxbqMOBfXScg5CFk5vjqJOZJH/y9wimHWvMKA3XDMgoqmynT6oS7i",
+  "country": "Bolivia",
+  "avatar": "pipe presentacion.jpeg"
+ },
+ {
+  "id": 19,
+  "fullName": "adsda",
+  "email": "feliperisdsva03@hotmail.com",
+  "password": "$2a$10$26W71DJhInjbxQf0S1HvE.D/akxBvZatiBGQPsciUGi0X9yXZ/W6C",
+  "country": "Bolivia",
+  "avatar": "pipe presentacion.jpeg"
+ },
+ {
+  "id": 20,
+  "fullName": "federico ",
+  "email": "fede@hotmail.com",
+  "password": "$2a$10$6ckjZYJCjCFfGR6MNt/G..R7fI8i1cVPm9pIBFpqGCLtpKdBRrDh6",
+  "country": "Argentina",
+  "avatar": "avatar-1662421365997-591851064.jpeg"
  }
 ]
