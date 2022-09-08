@@ -1,0 +1,7 @@
+## RELACIONES ENTRE TABALAS ##
+
+Product belongs to category
+
+Category has many products
+
+User belongs to 

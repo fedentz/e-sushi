@@ -15,23 +15,25 @@ let productController = {
     },
 
     crear: function(req, res){
-    /*  db.Product.findAll()
-        .then(function(product){
-            return res.render('create.ejs', {product:product})
-        })  */
+        
+        db.Category.findAll()
+        .then(function(category){
+            return res.render('create.ejs', {category:category})
+     })
 
         res.render('create.ejs')
 
     },
     guardado: function(req, res){
-        console.log(req.body)
         db.Product.create({
             name: req.body.name,
             description: req.body.description,
             price: req.body.price,
             image: req.body.image,
-            stock: req.body.stock
-            
+            stock: req.body.stock,
+            category_id:req.body.category_id
+
+        
         }) 
         res.render('create.ejs')
     },

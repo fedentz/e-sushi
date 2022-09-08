@@ -23,6 +23,9 @@ module.exports = function(sequelize,dataTypes){
         },
         stock:{
             type: dataTypes.INTEGER
+        },
+        category_id:{
+            type: dataTypes.INTEGER
         }
     }
 
