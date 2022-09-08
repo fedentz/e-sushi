@@ -1,22 +1,11 @@
-const express = require('express');
+/* const express = require('express');
 const router = express.Router();
 const path = require('path')
 const multer = require('multer'); 
 const { body } = require('express-validator')
 
 
-/* const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null,'./public/images/avatars')
-    },
-    fileName: (req, file, cb) => {
-        let fileName = `AAA${Date.now()}_img${path.extname(file.originalname)}`;
-        console.log('fileName:',fileName);
-        cb(null, fileName)}
-        
-}) */
-    
-/* const uploadFile = multer({storage}) */
+
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -80,4 +69,4 @@ router.get('/profile/', authMiddleware, usersControllers.profile);
 // Logout
 router.get('/logout/', usersControllers.logout);
 
-module.exports = router;
+module.exports = router; */

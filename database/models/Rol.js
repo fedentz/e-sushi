@@ -21,12 +21,12 @@ module.exports = function(sequelize,dataTypes){
 
     let Rol = sequelize.define(alias,cols,config)
 
-    Rol.associate = function(models) {
+    /* Rol.associate = function(models) {
         Rol.hasMany(models.Users, {
             as: "user",
             foreignKey: 'rol_id',
             timestamps: false
         })
-    }
+    } */
     return Rol
 }

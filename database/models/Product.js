@@ -9,32 +9,26 @@ module.exports = function(sequelize,dataTypes){
             primaryKey: true,
             autoIncrement: true
         },
-        firts_name:{
+        name:{
             type: dataTypes.STRING
         },
-        last_name:{
+        description:{
             type: dataTypes.STRING
         },
-        email:{
-            type: dataTypes.STRING
-        },
-        discount:{
+        price:{
             type: dataTypes.INTEGER
         },
         image:{
-            type: dataTypes.INTEGER
-        },
-        stock:{
             type: dataTypes.STRING
         },
-        id_products_category:{
+        stock:{
             type: dataTypes.INTEGER
         }
     }
 
     let config = {
-        tableName: 'products',
-        timeStamps: false
+        tableName: 'product',
+        timestamps: false
     }
 
     let Product = sequelize.define(alias,cols,config)
@@ -43,14 +37,6 @@ module.exports = function(sequelize,dataTypes){
         Product.belongsTo(models.Category, {
             as: "category",
             foreignKey: 'category_id',
-            timestamps: false
-        })
-    
-        Product.belongsTo(models.Cart, {
-            as: "carrito",
-            through: "cart_product",
-            foreignKey: 'product_id',
-            otherKey: 'cart_id',
             timestamps: false
         })
     }

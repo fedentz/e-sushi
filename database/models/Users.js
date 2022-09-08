@@ -39,12 +39,12 @@ module.exports = function(sequelize,dataTypes){
 
     let Users = sequelize.define(alias,cols,config)
 
-    Users.associate = function(models) {
+    /* Users.associate = function(models) {
         Users.belongsTo(models.Rol, {
             as: "rol",
             foreignKey: 'rol_id',
             timestamps: false
         })
-    }
+    } */
     return Users
 }
