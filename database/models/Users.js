@@ -1,6 +1,6 @@
 module.exports = function(sequelize,dataTypes){
     
-    let alias = "Users";
+    let alias = "User";
 
     let cols = {
         
@@ -33,7 +33,7 @@ module.exports = function(sequelize,dataTypes){
     }
 
     let config = {
-        tableName: 'users',
+        tableName: 'user',
         timeStamps: false
     }
 
