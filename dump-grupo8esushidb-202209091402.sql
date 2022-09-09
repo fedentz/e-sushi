@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.5.62, for Win64 (AMD64)
 --
--- Host: localhost    Database: grupo8esushiDB
+-- Host: localhost    Database: grupo8esushidb
 -- ------------------------------------------------------
 -- Server version	5.5.5-10.4.24-MariaDB
 
@@ -16,62 +16,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `cart`
+-- Table structure for table `category`
 --
 
 DROP DATABASE IF EXISTS grupo8esushiDB;
 CREATE DATABASE grupo8esushiDB;
 USE grupo8esushiDB;
-
-DROP TABLE IF EXISTS `cart`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cart` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `total_products` int(11) NOT NULL,
-  `total_price` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  CONSTRAINT `method_id` FOREIGN KEY (`id`) REFERENCES `payment_method` (`id`),
-  CONSTRAINT `user_id` FOREIGN KEY (`id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `cart`
---
-
-LOCK TABLES `cart` WRITE;
-/*!40000 ALTER TABLE `cart` DISABLE KEYS */;
-/*!40000 ALTER TABLE `cart` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `cart_product`
---
-
-DROP TABLE IF EXISTS `cart_product`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cart_product` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`id`),
-  CONSTRAINT `cart_id` FOREIGN KEY (`id`) REFERENCES `cart` (`id`),
-  CONSTRAINT `product_id` FOREIGN KEY (`id`) REFERENCES `product` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `cart_product`
---
-
-LOCK TABLES `cart_product` WRITE;
-/*!40000 ALTER TABLE `cart_product` DISABLE KEYS */;
-/*!40000 ALTER TABLE `cart_product` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `category`
---
 
 DROP TABLE IF EXISTS `category`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -80,7 +30,7 @@ CREATE TABLE `category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -89,30 +39,8 @@ CREATE TABLE `category` (
 
 LOCK TABLES `category` WRITE;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
+INSERT INTO `category` VALUES (1,'En oferta'),(2,'Ultimos agregados');
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `payment_method`
---
-
-DROP TABLE IF EXISTS `payment_method`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `payment_method` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `method` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `payment_method`
---
-
-LOCK TABLES `payment_method` WRITE;
-/*!40000 ALTER TABLE `payment_method` DISABLE KEYS */;
-/*!40000 ALTER TABLE `payment_method` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -125,14 +53,15 @@ DROP TABLE IF EXISTS `product`;
 CREATE TABLE `product` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
-  `description` varchar(500) NOT NULL,
+  `description` varchar(100) NOT NULL,
   `price` int(11) NOT NULL,
-  `discount` int(11) NOT NULL,
   `image` varchar(400) NOT NULL,
-  `stock` int(11) DEFAULT NULL,
+  `stock` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  CONSTRAINT `category_id` FOREIGN KEY (`id`) REFERENCES `category` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  KEY `product_FK` (`category_id`),
+  CONSTRAINT `product_FK` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -181,9 +110,11 @@ CREATE TABLE `user` (
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `phone_number` int(11) NOT NULL,
-  `image` varchar(400) DEFAULT NULL,
+  `image` varchar(400) NOT NULL,
+  `rol_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  CONSTRAINT `id_rol` FOREIGN KEY (`id`) REFERENCES `rol` (`id`)
+  KEY `user_FK` (`rol_id`),
+  CONSTRAINT `user_FK` FOREIGN KEY (`rol_id`) REFERENCES `rol` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -197,7 +128,7 @@ LOCK TABLES `user` WRITE;
 UNLOCK TABLES;
 
 --
--- Dumping routines for database 'grupo8esushiDB'
+-- Dumping routines for database 'grupo8esushidb'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -209,4 +140,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-05 12:12:08
+-- Dump completed on 2022-09-09 14:02:48
