@@ -17,12 +17,11 @@ let productController = {
     crear: function(req, res){
         
         db.Category.findAll()
-        .then(function(category){
-            return res.render('create.ejs', {category:category})
-     })
-
-        res.render('create.ejs')
-
+        .then(category => {
+            return res.render('create.ejs',{category})
+            
+        })
+    
     },
     guardado: function(req, res){
         db.Product.create({

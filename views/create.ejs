@@ -39,11 +39,14 @@
                         <div class="col-12 col-md-6">
                             <label for="category" class="form-label">Categoría:</label>
                             <select name="category_id" id="category" class="form-input">
-                                <% for (let i=0; i < category.length; i++) { %>
-                                    <option value="<%= category[i].id%>">
-                                        <%= category[i].name %>
-                                    </option>
+                                <% if (locals.category) { %>
+                                    <% for (let i=0; i < locals.category.length; i++) { %>
+                                        <option value= <%= locals.category[i].id%>">    
+                                            <%= locals.category[i].category %>
+                                        </option>
+                                        <% } %>
                                     <% } %>
+                            
                             </select>
                         </div>
                         <div class="col-12">
