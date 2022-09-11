@@ -6,6 +6,15 @@
 <body>
     <%- include('./partials/header') %>
     <main></main>
+
+    <% for (let i=0 ; i < product.length ; i++) { %>
+        <li>
+            <a href="/products/<%=product[i].id%>">
+                <%= product[i].name %>
+            </a>
+        </li>
+    <% } %>
+
     </main>
 
     <%- include('./partials/footer') %>

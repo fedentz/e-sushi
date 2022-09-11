@@ -1,10 +1,11 @@
 // ************ Require's ************
 const express = require("express");
 const router = express.Router();
-const productController = require("../controllers/productController")
 const multer = require('multer');
 const path = require('path')
-// ************ Controller Require ************
+
+// controller
+const productController = require("../controllers/productController")
 
 
 // ************ Multer Settings ************
@@ -19,28 +20,38 @@ let storage = multer.diskStorage({
     }
 })
 let upload = multer({ storage: storage })
-// PRODUCTOS
+
+
+// RUTAS DE PRODUCTOS
+
+// listado de productos
 router.get('/', productController.product);
-router.get('/create', productController.crear);
 
-router.post('/create',upload.single('image') , productController.guardado);
+// detalle de produto !! err en controller --> 'findByPK is not a function'
+router.get('/:id', productController.detalle);
 
-router.get('/:id', productController.product);
-
-router.get('/listado', productController.listado);
 
 // CREATE
 
+//formulario de creacion
+router.get('/form/create', productController.crear);
 
-/* 
-router.post('/',upload.single("image"), productController.store); */
+//guardado de producto
+router.post('/create',upload.single('image') , productController.guardado);
 
-//EDIT PUT
-/* router.get('/:id/edit', productController.productToEdit)
-router.put('/:id', productController.update) */
+
+//EDIT (PUT)
+//formulario de edicion de producto !! err en controller --> 'findByPK is not a function'
+router.get('/:id/edit', productController.editar)
+
+//Guardado de edicion de producto
+router.put('/:id', productController.actualizar)
 
 // DELETE
-/* router.delete('/:id/eliminar',productController.delete) */
+router.delete('/:id/eliminar',productController.borrar)
+
+//CARRITO (prximamente) --> crear .carrito
+/* router.post('/',upload.single("image"), productController.carrito) */
 
 
 module.exports = router;
