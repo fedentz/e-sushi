@@ -1,4 +1,4 @@
-/* const express = require('express');
+const express = require('express');
 const router = express.Router();
 const path = require('path')
 const multer = require('multer'); 
@@ -29,7 +29,7 @@ const authMiddleware = require('../middlewares/authMiddleware');
 const usersControllers = require('../controllers/userController');
 const { fileName } = require('../models/User');
 
-//En BODY va el nombre del campo del formulario que queremos validar
+
 
 const validations = [
     body('fullName').notEmpty().withMessage('Tienes que escribir un nombre'),
@@ -69,4 +69,4 @@ router.get('/profile/', authMiddleware, usersControllers.profile);
 // Logout
 router.get('/logout/', usersControllers.logout);
 
-module.exports = router; */
+module.exports = router;

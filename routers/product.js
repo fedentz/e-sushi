@@ -27,7 +27,7 @@ let upload = multer({ storage: storage })
 // listado de productos
 router.get('/', productController.product);
 
-// detalle de produto !! err en controller --> 'findByPK is not a function'
+// detalle de produto 
 router.get('/:id', productController.detalle);
 
 
@@ -41,10 +41,10 @@ router.post('/create',upload.single('image') , productController.guardado);
 
 
 //EDIT (PUT)
-//formulario de edicion de producto !! err en controller --> 'findByPK is not a function'
+//formulario de edicion de producto 
 router.get('/:id/edit', productController.editar)
 
-//Guardado de edicion de producto
+//Guardado de edicion de producto !! ERR --> cannot put
 router.put('/:id', productController.actualizar)
 
 // DELETE
