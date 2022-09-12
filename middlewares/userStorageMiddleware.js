@@ -1,6 +1,11 @@
-/* const storage = multer.diskStorage({
+//REQUIRE DEL FILENAME
+
+const multer = require("multer");
+const path = require("path");
+
+const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, './public/images/avatars')
+      cb(null, '../public/images/avatar')
     },
     filename: function (req, file, cb) {
       const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
@@ -9,4 +14,4 @@
     }
   })
   
-  const uploadFile = multer({ storage: storage }) */
+  module.exports = multer({ storage: storage })

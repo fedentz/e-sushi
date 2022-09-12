@@ -28,10 +28,10 @@ app.use(cookies());
 
 const mainRoute = require('./routers/main.js');
 const productRoute = require('./routers/product.js');
-/* const userRoute = require('./routers/userRoutes.js'); */
+const userRoute = require('./routers/userRoutes.js');
 
 app.use('/', mainRoute);
 app.use('/products', productRoute);
-/* app.use('/user', userRoute); */
+app.use('/user', userRoute);
 
 app.listen(3030, () => console.log('Corriendo el puerto 3030'));

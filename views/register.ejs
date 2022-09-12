@@ -16,14 +16,46 @@
                     <div class="form group">
                         <input 
                         type="text" 
-                        name="fullName" 
-                        placeholder="Nombre de usuario"
+                        name="fisrt_name" 
+                        placeholder="Nombre"
                         id="registro-name"
-                        class="form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>"
-                        value="<% locals.oldData ? oldData.fullName : null %>">
-                        <% if(locals.errors && errors.fullName) { %>
+                        class="form-control <%= locals.errors && errors.first_name ? 'is-invalid' : null %>"
+                        value="<% locals.oldData ? oldData.first_name : null %>">
+                        <% if(locals.errors && errors.fisrt_name) { %>
                             <div class="text-danger">
-                                <%= errors.fullName.msg %>
+                                <%= errors.first_name.msg %>
+                            </div>
+                        <% } %>
+                    </div>
+                </div> 
+                <div class="col-md-6 my-1">
+                    <div class="form group">
+                        <input 
+                        type="text" 
+                        name="last_name" 
+                        placeholder="Apellido"
+                        id="registro-name"
+                        class="form-control <%= locals.errors && errors.last_name ? 'is-invalid' : null %>"
+                        value="<% locals.oldData ? oldData.last_name : null %>">
+                        <% if(locals.errors && errors.last_name) { %>
+                            <div class="text-danger">
+                                <%= errors.last_name.msg %>
+                            </div>
+                        <% } %>
+                    </div>
+                </div> 
+                <div class="col-md-6 my-1">
+                    <div class="form group">
+                        <input 
+                        type="text" 
+                        name="phone_number" 
+                        placeholder="Numero de telefono"
+                        id="registro-name"
+                        class="form-control <%= locals.errors && errors.phone_number ? 'is-invalid' : null %>"
+                        value="<% locals.oldData ? oldData.phone_number : null %>">
+                        <% if(locals.errors && errors.phone_number) { %>
+                            <div class="text-danger">
+                                <%= errors.phone_number.msg %>
                             </div>
                         <% } %>
                     </div>
@@ -59,25 +91,6 @@
                                 <%= errors.password.msg %>
                             </div>
                         <% } %>
-                </div>
-                <div class="col-md-6 my-1">
-                    <div class="form-group">
-                        <label><b>Pais de Nacimiento</b></label>
-                        <select name="country" class="form-select">
-                            <option value="">Elegi un Pais</option>
-                            <%
-                              let countries = ['Argentina', 'Bolivia', 'Brasil', 'Colombia', 'Chile', 'Ecuador', 'Paraguay', 'Peru', 'Uruguay', 'Venezuela'];
-                            %>
-                            <% for (const oneCountry of countries) { %> 
-                            <option value="<%= oneCountry %>" <%= locals.oldData && (oneCountry === oldData.country) ? 'selected' :null %>> <%= oneCountry %> </option>
-                            <% } %>
-                        </select>
-                        <% if(locals.errors && errors.country) { %>
-                            <div class="text-danger">
-                                <%= errors.country.msg %>
-                            </div>
-                        <% } %>
-                    </div>
                 </div>
                 <div class="imagen-perfil">
                     <div class="form-group">

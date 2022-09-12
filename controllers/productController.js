@@ -1,8 +1,6 @@
 const express = require("express");
 const path = require("path");
 var Promise = require('promise')
-
-
 let db = require('../database/models')
 
 let productController = {
