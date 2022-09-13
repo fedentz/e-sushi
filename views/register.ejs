@@ -10,13 +10,12 @@
     <main class="registro-mail">
         <form class="login-full" method="POST" action="/user/register" enctype="multipart/form-data" autocomplete="nope">
             <h4 id="registro-titulo">Registrate</h4>
-            <button id="registro-facebook" type="button"><i class="fab fa-facebook"></i> CONECTAR CON FACEBOOK</button><br>
             <div class="row">
                 <div class="col-md-6 my-1">
                     <div class="form group">
                         <input 
                         type="text" 
-                        name="fisrt_name" 
+                        name="first_name" 
                         placeholder="Nombre"
                         id="registro-name"
                         class="form-control <%= locals.errors && errors.first_name ? 'is-invalid' : null %>"

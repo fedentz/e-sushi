@@ -1,9 +1,9 @@
-/* const User = require('../models/User');
+/* const User = require('../database/models/Users');
 
 function userLoggedMw(req, res, next) {
 	res.locals.isLogged = false;
 
-	let emailInCookie = req.cookies.userEmail;
+	let emailInCookie = req.cookies.email;
 	let userFromCookie = User.findByField('email', emailInCookie);
 
 	if (userFromCookie) {

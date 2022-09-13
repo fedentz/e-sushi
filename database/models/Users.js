@@ -9,7 +9,7 @@ module.exports = function(sequelize,dataTypes){
             primaryKey: true,
             autoIncrement: true
         },
-        firts_name:{
+        first_name:{
             type: dataTypes.STRING
         },
         last_name:{
