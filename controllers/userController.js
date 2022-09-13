@@ -40,11 +40,14 @@ let userController = {
             phone_number: req.body.phone_number,
             password: bcryptjs.hashSync(req.body.password, 10),
             avatar: req.body.avatar,
-            id_rol: 1
-        })
+            rol_id: 1 
+        },{
+        where: {
+            id: req.params.id
+        }})
         res.redirect('/')
-    /* } */
+    }
 }
-}
+/* }  */
 
 module.exports = userController

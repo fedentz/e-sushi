@@ -27,7 +27,7 @@ module.exports = function(sequelize,dataTypes){
         image:{
             type: dataTypes.STRING
         },
-        id_rol:{
+        rol_id:{
             type: dataTypes.INTEGER
         }
     }
