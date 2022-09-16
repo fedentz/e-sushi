@@ -58,7 +58,14 @@ article{
     width: 90%;
     margin:  auto;
     text-align: center;
-    margin: 10px
+    margin: 10px,
+ }
+ .imagen-producto-menu img{
+    width: 100%;
+ }
+ .imagen-producto-menu img:hover{
+    transform: scale(1.5);
+    transition-duration: 5s
  }
 
  .blackbg{
@@ -124,6 +131,7 @@ footer p{
     right: 50px;
     bottom: 120px;
 }
+
 .boton-pedido{
     display: block;
     cursor: pointer;
@@ -133,6 +141,11 @@ footer p{
     border-radius: 50%;
     width: 80px;
     height: 80px;   
+}
+
+.boton-pedido:hover{
+    zoom: 250%;
+    transition-duration: 3s;
 }
 
 .footer-box{
@@ -500,12 +513,14 @@ gap: 7px;
     text-align: center;
 }
 #button-profile-menu{
+    display: flex;
     padding: 10px;
     color: white;
     background-color: #800000;
     border: none;
     margin-bottom: 5px;
     border-radius: 15px;
+    margin: auto
 }
 #div-profile-menu{
     margin-top: 50px;
@@ -527,6 +542,11 @@ gap: 7px;
     color: white;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+.nombre-usuario{
+    color: white
+}
+
 @media (min-width: 768px) {
 
     header{

@@ -20,6 +20,9 @@ const controlador = {
     eventos: (req, res) => {
         res.render('eventos.ejs')
     },
+    perfil: (req, res) => {
+        res.render('perfil.ejs')
+    }
 };
 
 
