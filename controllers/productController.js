@@ -57,13 +57,11 @@ let productController = {
     },
 
     editar: function(req,res){
-        let pedidoProduct = db.Product.findByPk(req.params.id)
-
-        let pedidoCategory = db.Category.findAll()
-
-        Promise.all([pedidoProduct, pedidoCategory])
-        .then(function(product, category){
-            res.render('edit.ejs', {product: product, category: category})
+        db.Product.findByPk(req.params.id, {
+            include: [{association: 'category'}]
+        })
+        .then(function(product){
+            res.render('edit.ejs', {product: product})
         })
     },
 

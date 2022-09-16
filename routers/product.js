@@ -45,13 +45,10 @@ router.post('/create',upload.single('image') , productController.guardado);
 router.get('/:id/edit', productController.editar)
 
 //Guardado de edicion de producto !! ERR --> cannot put
-router.put('/:id', productController.actualizar)
+router.put('/:id', upload.single("image") ,productController.actualizar)
 
 // DELETE
 router.delete('/:id/eliminar',productController.borrar)
-
-//CARRITO (prximamente) --> crear .carrito
-/* router.post('/',upload.single("image"), productController.carrito) */
 
 
 module.exports = router;
