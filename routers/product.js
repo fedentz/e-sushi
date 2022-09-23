@@ -23,7 +23,11 @@ let upload = multer({ storage: storage })
 
 
 // RUTAS DE PRODUCTOS
+//formulario de creacion
+router.get('/create', productController.crear);
 
+//formulario de edicion de producto 
+router.get('/:id/edit', productController.editar)
 // listado de productos
 router.get('/', productController.product);
 
@@ -31,18 +35,15 @@ router.get('/', productController.product);
 router.get('/:id', productController.detalle);
 
 
-// CREATE
 
-//formulario de creacion
-router.get('/form/create', productController.crear);
+
+
 
 //guardado de producto
 router.post('/create',upload.single('image') , productController.guardado);
 
 
 //EDIT (PUT)
-//formulario de edicion de producto 
-router.get('/:id/edit', productController.editar)
 
 //Guardado de edicion de producto !! ERR --> cannot put
 router.put('/:id', upload.single("image") ,productController.actualizar)

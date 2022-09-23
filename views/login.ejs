@@ -7,22 +7,13 @@
         <%- include('./partials/header') %>
         <main class="registro-mail">
         <article class="log-in">
-<!-- <<<<<<< HEAD -->
-        <!-- <form class="ingresar" action="login" method="POST">INICIAR SESION 
-            <button class="facebook-boton" type="button"><i class="fab fa-facebook"></i> CONECTAR CON FACEBOOK</button>
-            <label for="nombre de usuario" ></label>
-            <input  class="llenar" type="text" id="nombre de usuario" name="nombre de usuario" placeholder="Nombre de usuario" required minlength="4"> 
-            <label for="password" ></label>
-            <input class="llenar" type="password" id="password" name="password" placeholder="Elegí tu contraseña" required minlength="8"> 
-            <label for="">Recordame</label>
-            <input type="checkbox" name="recordame"><br>
-            <label for="enviar" ></label>
-            <input  class="enviar-boton" type="submit" id="enviar" name="enviar"> 
-            <div> No tengo cuenta, <a class="registro" href="./register" > registrarme</a></div> 
-        </form> -->
-<!-- ======= -->
+            
          <form class="login-full" method="POST" action="/user/login">
                 <h4 id="registro-titulo">Log in</h4>
+                <div class="validacionesFront">
+                    <ul class="textError">
+                    </ul>
+                </div>
                 <div class="row">
                     <div class="col-md-6 my-2">
                         <div class="form-group">
@@ -36,7 +27,7 @@
                     </div>
                     <div class="col-md-6 my-2">
                         <div class="form-group">
-                            <input type="password" id="registro-name" name="password" placeholder="Contraseña" class="form-control">
+                            <input type="password" id="registro-name" name="password" placeholder="Contraseña" class="form-password">
                             <div class="invalid-feedback">
                             </div>
                         </div>
@@ -54,9 +45,10 @@
                     </div>
                 </div>
             </form>
-<!-- >>>>>>> d3bf6f065e16ae5bc68c148d3ff8b830e66fb1c5
+
     </article>
     </main>
+    <script src="../js/loginValidation.js"></script>
     </body>
 </div>
 <%- include('./partials/footer') %>

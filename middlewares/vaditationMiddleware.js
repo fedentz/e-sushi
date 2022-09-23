@@ -2,8 +2,8 @@ const { body } = require('express-validator')
 const path = require('path');
 
 const validations = [
-body('first_name').notEmpty().withMessage('Tienes que escribir un nombre'),
-body('last_name').notEmpty().withMessage('Tienes que escribir un apellido'),
+body('first_name').notEmpty().withMessage('Tienes que escribir un nombre').isLength({min: 2}).withMessage("Tienes que escribir más de 2 caracteres"),
+body('last_name').notEmpty().withMessage('Tienes que escribir un apellido').isLength({min: 2}).withMessage("Tienes que escribir más de 2 caracteres"),
 body('phone_number').notEmpty().withMessage('Tienes que escribir un numero de telefono'),
 body('email').notEmpty().withMessage('Tienes que escribir un email').bail().isEmail().withMessage('Debes escribir un email valido'),
 body('password').notEmpty().withMessage('Tienes que escribir una password'),

@@ -18,7 +18,7 @@ let productController = {
         
         db.Category.findAll()
         .then(category => {
-            return res.render('create.ejs',{category})
+            return res.render('create.ejs',{category:category})
             
         })
     

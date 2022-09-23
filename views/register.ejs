@@ -8,8 +8,12 @@
     <%- include('./partials/header') %>
 
     <main class="registro-mail">
-        <form class="login-full" method="POST" action="/user/register" enctype="multipart/form-data" autocomplete="nope">
+        <form class="register-full" method="POST" action="/user/register" enctype="multipart/form-data" autocomplete="nope">
             <h4 id="registro-titulo">Registrate</h4>
+            <div class="validacionesFront">
+                <ul class="textError">
+                </ul>
+            </div>
             <div class="row">
                 <div class="col-md-6 my-1">
                     <div class="form group">
@@ -34,7 +38,7 @@
                         name="last_name" 
                         placeholder="Apellido"
                         id="registro-name"
-                        class="form-control <%= locals.errors && errors.last_name ? 'is-invalid' : null %>"
+                        class="form-lastname <%= locals.errors && errors.last_name ? 'is-invalid' : null %>"
                         value="<% locals.oldData ? oldData.last_name : null %>">
                         <% if(locals.errors && errors.last_name) { %>
                             <div class="text-danger">
@@ -50,7 +54,7 @@
                         name="phone_number" 
                         placeholder="Numero de telefono"
                         id="registro-name"
-                        class="form-control <%= locals.errors && errors.phone_number ? 'is-invalid' : null %>"
+                        class="form-number <%= locals.errors && errors.phone_number ? 'is-invalid' : null %>"
                         value="<% locals.oldData ? oldData.phone_number : null %>">
                         <% if(locals.errors && errors.phone_number) { %>
                             <div class="text-danger">
@@ -67,7 +71,7 @@
                         autocomplete="nope" 
                         placeholder="E-mail"
                         id="registro-mail"
-                        class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                        class="form-email <%= locals.errors && errors.email ? 'is-invalid' : null %>"
                         value="<% locals.oldData ? oldData.fullName : null %>" >
                         <% if(locals.errors && errors.email) { %>
                             <div class="text-danger">
@@ -83,7 +87,7 @@
                         autocomplete="nope"
                         placeholder="Constraseña"
                         id="registro-password"
-                        class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                        class="form-password <%= locals.errors && errors.password ? 'is-invalid' : null %>"
                         value="<% locals.oldData ? oldData.fullName : null %>">
                         <% if(locals.errors && errors.password) { %>
                             <div class="text-danger">
@@ -116,5 +120,6 @@
 
     <%- include('./partials/footer') %>
     <%- include('./partials/boton-flotante') %>
+    <script src="../js/registerValidation.js"></script>
 </body>
 </html>
