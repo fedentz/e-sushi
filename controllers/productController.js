@@ -28,13 +28,11 @@ let productController = {
             name: req.body.name,
             description: req.body.description,
             price: req.body.price,
-            image: req.body.image,
+            image: req.file.originalname,
             stock: req.body.stock,
-            category_id:req.body.category_id
-
-        
-        }) 
-        res.render('create.ejs')
+            category_id:req.body.category_id , 
+        }).then(() =>  res.render('create.ejs') ) 
+       
     },
 
     listado: function(req,res){
