@@ -219,6 +219,11 @@ margin-top: auto;
 #registro-titulo{
     padding-top: 10px;
 }
+#create-titulo{
+    padding-top: 10px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
 .text-danger{
     color:rgb(182, 13, 13)
 }
@@ -227,12 +232,15 @@ margin-top: auto;
     text-decoration: none;
     padding: 3px;
 }
+
 .eventos-texto{
+    font-size: 16px;
     text-align: center;
     color: white;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.eventos-titulo{
+#eventos-titulo{
+    font-size: 25px;
     color: white;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -255,6 +263,12 @@ gap: 7px;
     background-color: black;
 }
 .registro-full{
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #ebebeb;
+    text-align: center;
+}
+.register-full{
     margin-left: 20px;
     margin-right: 20px;
     background-color: #ebebeb;
@@ -288,6 +302,13 @@ gap: 7px;
     padding: 10px;
     width: 60%;
 }
+.vista-create-input{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    padding: 10px;
+    width: 60%;
+}
 #registro-mail{
     margin-top: 15px;
     margin-bottom: 15px;
@@ -295,6 +316,7 @@ gap: 7px;
     padding: 10px;
     width: 60%;
 }
+
 #registro-mail-2{
     margin-top: 15px;
     margin-bottom: 15px;
@@ -321,7 +343,16 @@ gap: 7px;
     width: 60%;
     margin-bottom: 5px;
 }
-
+#create-button{
+    padding: 15px;
+    color: white;
+    background-color: black;
+    border: none;
+    width: 70%;
+    width: 60%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 .products{
     margin-left: auto;
     margin-top: 5%;
@@ -430,8 +461,8 @@ gap: 7px;
 .home-section2{
     width: 90%;
     text-align: center;
-    font-size: 25px;
     margin: 0 auto;
+
 }
 .products-title{
     margin-top: 15px;
@@ -465,6 +496,13 @@ gap: 7px;
     margin-bottom: 5px;
 }
 #box-edit{
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #ebebeb;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#box-create{
     margin-left: 20px;
     margin-right: 20px;
     background-color: #ebebeb;
@@ -538,7 +576,7 @@ gap: 7px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 #p-nosotros{
-    font-size: 20px;
+    font-size: 16px;
     color: white;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -587,11 +625,14 @@ gap: 7px;
         color: white;
         text-decoration: none; 
     }
-
     .main-eventos{
+        margin-top: 150px;
         width: 100%;
         height: 100%;
         display: flex;
+    }
+    #p-nosotros{
+        font-size: 22px;
     }
     .eventos-texto{
         width: 50%;
@@ -607,7 +648,7 @@ gap: 7px;
         background-color: #000000;
     }
     .eventos-texto{
-        font-size: 25px;
+        font-size: 22px;
         text-align: center;
         color: white;
         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -646,4 +687,9 @@ justify-content: center;
     width: 45%;
     margin: 0 auto;
 }
+#box-create{
+    width: 75%;
+    margin: 0 auto;
 }
+}
+
