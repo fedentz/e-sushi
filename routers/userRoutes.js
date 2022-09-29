@@ -16,7 +16,7 @@ const uploadFile = require('../middlewares/userStorageMiddleware');
 
 
 // formulario de registro
-router.get('/register', /* guestMiddleware */ usersControllers.register);
+router.get('/register', guestMiddleware, usersControllers.register);
 
 // Proceso de registro
 router.post('/register', uploadFile.single('avatar'), validations, usersControllers.processRegister);

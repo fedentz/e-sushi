@@ -3,19 +3,22 @@
 
 <%- include('./partials/head') %>
 
-<body id="box-edit" class="background-image">
+<!-- <body id="box-edit" class="background-image"> -->
     <%- include('./partials/header') %>
 
     <main class="maincreate" id="main-edit">
         <div id="box-create" class="container products-wrapper">
+            
             <div class="row">
                 <div class="col-12">
                     <h2 id="create-titulo" class="products-title">Formulario de creación de productos</h2>
                 </div>
             </div>
             <div class="col-12">
-                <form class="register-full" action="/products/create" method="POST" enctype="multipart/form-data">
-                    <div class="row product-detail"
+                <form class="productCerate" action="/products/create" method="POST" enctype="multipart/form-data">
+                    </div>
+                    
+                     <div class="row product-detail">
                         <div class="col-12 col-md-6">
                             <label for="name" class="form-label">Nombre del producto:</label>
                             <input type="text" id="name" name="name" placeholder="Ej:Tabla de salmon" class="form-input vista-create-input">
@@ -26,15 +29,11 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <label for="price" class="form-label">Precio del producto:</label>
-                            <input type="text" id="price" name="price" placeholder="Ej: 1700" class="form-input vista-create-input">
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <label for="price" class="form-label">Stock:</label><br>
-                            <input type="text" id="price" name="stock" placeholder="Ej: 1700" class="form-input vista-create-input">
+                            <input type="text" id="price" name="price" placeholder="Ej: 1700" class="form-input vista-create-input-precio">
                         </div>
                         <div class="col-12 col-md-6">
                             <label for="discount" class="form-label">Descuento:</label><br>
-                            <input type="text" id="discount" name="discount" placeholder="Ej: 15" class="form-input vista-create-input">
+                            <input type="text" id="discount" name="discount" placeholder="Ej: 15" class="form-input vista-create-input-decuento">
                         </div>
                         <div class="col-12 col-md-6">
                             <label for="category" class="form-label">Categoría:</label>
@@ -57,12 +56,17 @@
                             <button type="submit" id="create-button" class="buy-now-button">Guardar producto</button>
                         </div>
                     </div>
+                   <div class="validacionesFront">
+                        <ul class="textError">
+                        </ul>
+                    </div>
                 </form>
             </div>
     
         </div>
     
     </main>
+    <script src="../js/productCreateValidation.js"></script>
 </body>
 
 <%- include('./partials/footer') %>

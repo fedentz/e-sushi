@@ -24,12 +24,20 @@ let productController = {
     
     },
     guardado: function(req, res){
+
+        let productImg
+        let imageFromBody = req.file
+        if(imageFromBody){
+            productImg = "img-product/" + req.file.originalname
+        } else {
+            productImg = "img-product/default.png"
+        }    
+
         db.Product.create({
             name: req.body.name,
             description: req.body.description,
             price: req.body.price,
-            image: req.file.originalname,
-            stock: req.body.stock,
+            image: productImg,
             category_id:req.body.category_id , 
         }).then(() =>  res.render('create.ejs') ) 
        

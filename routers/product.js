@@ -3,6 +3,7 @@ const express = require("express");
 const router = express.Router();
 const multer = require('multer');
 const path = require('path')
+const validations = require('../middlewares/productValidateMw');
 
 // controller
 const productController = require("../controllers/productController")
@@ -40,7 +41,7 @@ router.get('/:id', productController.detalle);
 
 
 //guardado de producto
-router.post('/create',upload.single('image') , productController.guardado);
+router.post('/create',upload.single('image') ,validations, productController.guardado);
 
 
 //EDIT (PUT)

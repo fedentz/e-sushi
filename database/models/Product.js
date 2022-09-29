@@ -21,9 +21,6 @@ module.exports = function(sequelize,dataTypes){
         image:{
             type: dataTypes.STRING
         },
-        stock:{
-            type: dataTypes.INTEGER
-        },
         category_id:{
             type: dataTypes.INTEGER
         }
