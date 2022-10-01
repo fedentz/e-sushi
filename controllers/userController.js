@@ -1,9 +1,6 @@
-const express = require("express");
-const path = require("path");
-var Promise = require('promise')
 let db = require('../database/models')
 const bcryptjs = require('bcryptjs');
-const validation = require('express-validator')
+const { validationResult } = require("express-validator");
 
 let userController = {
     register: (req, res) => {
@@ -11,7 +8,7 @@ let userController = {
     },
 
     processRegister: async function (req, res) {
-       /*  const validate = validation(req)
+        const validate = validationResult(req)
 
         if(validate.errors.length > 0){
         res.render('register.ejs', {
@@ -32,7 +29,7 @@ let userController = {
                 }
             }
             return res.render('register.ejs', {errors : errors})
-        } */
+        } 
         db.User.create({
             first_name: req.body.first_name,
             last_name: req.body.last_name,
@@ -46,7 +43,7 @@ let userController = {
             id: req.params.id
         }})
         res.redirect('/')
-        /* }  */
+         } 
     },
     login: (req, res) => {
         res.render('login.ejs')

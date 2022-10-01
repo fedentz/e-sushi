@@ -1,32 +1,22 @@
 window.addEventListener("load", function () {
-    let registerForm = document.querySelector("form.productCerate");
-
+    let registerForm = document.querySelector(".productCerate");
+    let ulErrores = document.querySelector(".validacionesFront")
     registerForm.addEventListener("submit", function (e) {
-
+        ulErrores.innerHTML = "" //para que no se acumulen las validaciones anteriores
         let errores = [];
 
-        let nameField = document.querySelector(".form-input vista-create-input");
-        if (nameField.value == "") {
+        let nameField = document.querySelector("#name"); //use el id en vez de la clase para evitar confusion
+        if (!nameField.value.trim().length) {
             errores.push("El nombre es obligatorio");
         } else if (nameField.value.length < 5) {
             errores.push("El nombre debe tener al menos 5 caracteres")
         }
 
-        let lastNameField = document.querySelector(".form-input vista-create-input-imagen");
-        if (lastNameField.value == "") {
-            errores.push("El apellido es obligatorio");
-        } else if (lastNameField.value.length < 2) {
-            errores.push("El apellido debe tener al menos 2 caracteres")
-        }
-
-        
-
-        if (errores.length > 0) {
-            e.preventDefault();
-            let ulErrores = document.querySelector(".validacionesFront ul")
-            for (let i = 0; i < errores.length; i++) {
-                ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
-            }
-        }
-});
+         if (errores.length > 0) {
+              e.preventDefault();              
+              for (let i = 0; i < errores.length; i++) {
+                  ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
+              }
+          } 
+    });
 })

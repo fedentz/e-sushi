@@ -1,6 +1,3 @@
-const express = require("express");
-const path = require("path");
-var Promise = require('promise')
 let db = require('../database/models')
 
 let productController = {
@@ -18,13 +15,13 @@ let productController = {
         
         db.Category.findAll()
         .then(category => {
-            return res.render('create.ejs',{category:category})
+            return res.render('create.ejs',{category})
             
         })
     
     },
     guardado: function(req, res){
-
+        console.log(req.body)
         let productImg
         let imageFromBody = req.file
         if(imageFromBody){

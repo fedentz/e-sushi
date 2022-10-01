@@ -24,13 +24,13 @@ window.addEventListener("load", function () {
         if (emailField.value == "") {
             errores.push("El mail es obligatorio");
         } else if (!emailField.value.match(validRegex)) {
-   
+
             errores.push("Debes ingresar un formato de email valido")
         }
         let phoneField = document.querySelector(".form-number");
         if (phoneField.value == "") {
             errores.push("El numero es obligatorio");
-        } 
+        }
 
         let passwordField = document.querySelector(".form-password");
         if (passwordField.value == "") {
