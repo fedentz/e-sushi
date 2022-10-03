@@ -4,6 +4,7 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path')
 const validations = require('../middlewares/productValidateMw');
+const editValidations = require('../middlewares/editProductValidationMw')
 
 // controller
 const productController = require("../controllers/productController")
@@ -46,8 +47,8 @@ router.post('/create',upload.single('image') ,validations, productController.gua
 
 //EDIT (PUT)
 
-//Guardado de edicion de producto !! ERR --> cannot put
-router.put('/:id', upload.single("image") ,productController.actualizar)
+//Guardado de edicion de producto 
+router.put('/:id', upload.single("image"),editValidations ,productController.actualizar)
 
 // DELETE
 router.delete('/:id/eliminar',productController.borrar)

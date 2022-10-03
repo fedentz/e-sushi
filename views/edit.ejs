@@ -16,22 +16,46 @@
             </div>
             <div class="col-12">
                 <form class="form-edit" action="/products/<%=product.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <div class="validacionesFront">
+                        <ul class="textError">
+                        </ul>
+                    </div>
                     <div class="row product-detail">
                         <div class="col-12 col-md-6">
                             <label for="name" class="form-label">Nombre del producto:</label><br>
                             <input type="text" id="name" name="name" value="<%= product.name %>" placeholder="<%= product.name %>" class="form-input products-title" >
+                            <% if(locals.errors && errors.name) { %>
+                                <div class="text-danger">
+                                    <%= errors.name.msg %>
+                                </div>
+                            <% } %>
                         </div>
                         <div class="col-12 col-md-6">
                             <label for="price" class="form-label">Precio del producto:</label><br>
                             <input type="text" id="price" name="price" value="<%=product.price%>" placeholder="<%=product.price%>" class="form-input products-title">
+                            <% if(locals.errors && errors.price) { %>
+                                <div class="text-danger">
+                                    <%= errors.price.msg %>
+                                </div>
+                            <% } %>
                         </div>
                         <div class="col-12 col-md-6 image-edit">
                             <label for="image" class="form-label">Imagen del producto:</label><br>
                             <input type="file" id="image" name="image" value="<%=product.image%>" placeholder="Ej: Image.jpg" class="form-input" enctype="multipart/form-data">
+                            <% if(locals.errors && errors.image) { %>
+                                <div class="text-danger">
+                                    <%= errors.image.msg %>
+                                </div>
+                            <% } %>
                         </div>
                        <div class="col-12 col-md-6">
                             <label for="discount" class="form-label">Descuento:</label><br>
                             <input type="text" id="discount" name="discount" value="<%=product.discount%>" placeholder="<%=product.discount%>" class="form-input products-title">
+                            <% if(locals.errors && errors.discount) { %>
+                                <div class="text-danger">
+                                    <%= errors.discount.msg %>
+                                </div>
+                            <% } %>
                         </div>
                         <div class="col-12 col-md-6 descripcion-edit">
                             <label for="category" class="form-label">Categoría:</label>
@@ -63,6 +87,7 @@
         </div>
 
     </main>
+    <script src="/js/productEdit.js"></script>
 </body>
 
 <%- include('./partials/footer') %>

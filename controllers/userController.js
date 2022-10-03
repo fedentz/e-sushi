@@ -10,12 +10,17 @@ let userController = {
     processRegister: async function (req, res) {
         const validate = validationResult(req)
 
-        if(validate.errors.length > 0){
+
+
+//Redrirecciona solo cuando no esta esto.Pero estando tampoco guarda en al DB. Pero sin esto no podemos validar la imagen.
+
+        /* if(validate.errors.length > 0){
         res.render('register.ejs', {
             errors: validate.mapped(),
             oldData: req.body
         });
-        } else {
+        } else { */
+
             let validateEmail = await db.User.findOne({
                 where: {
                     email: req.body.email
@@ -29,8 +34,29 @@ let userController = {
                 }
             }
             return res.render('register.ejs', {errors : errors})
-        } 
-        db.User.create({
+        } else {
+            //no se guarda la img en DB (en product si)
+           /*  let avatarImg
+            let imageFromBody = req.file
+            if(imageFromBody){
+            avatarImg = "img-product/" + req.file.originalname
+        } else {
+            avatarImg = "img-product/default.png"
+        }     */
+            db.User.create({
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            email: req.body.email,
+            phone_number: req.body.phone_number,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            avatar: avatarImg,
+            rol_id: 1 
+        },{
+        where: {
+            id: req.params.id
+        }}).then(() => res.redirect('/'))}
+        
+        /* db.User.create({
             first_name: req.body.first_name,
             last_name: req.body.last_name,
             email: req.body.email,
@@ -41,9 +67,11 @@ let userController = {
         },{
         where: {
             id: req.params.id
-        }})
-        res.redirect('/')
-         } 
+        }}).then(() => res.redirect('/')) */
+
+        /* res.redirect('/') */
+
+        /*  }  */
     },
     login: (req, res) => {
         res.render('login.ejs')

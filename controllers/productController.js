@@ -21,7 +21,7 @@ let productController = {
         })
     
     },
-    guardado: function(req, res){
+    guardado: async function(req, res){
         let productImg
         let imageFromBody = req.file
         if(imageFromBody){
@@ -45,7 +45,32 @@ let productController = {
             image: productImg,
             category_id:req.body.category_id , 
         }).then(() =>  res.render('create.ejs') ) 
-       
+
+       /*  const validate = validationResult(req)    
+
+        if (validate.isEmpty()){
+
+            let imageFromBody = req.file
+        if(imageFromBody){
+            productImg = "img-product/" + req.file.originalname
+        } else {
+            productImg = "img-product/default.png"
+        }
+
+            await db.Product.create({
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                image: productImg,
+                category_id:req.body.category_id , 
+            }).then(() =>  res.redirect('/products') )
+        } else{
+            res.render('create.ejs', {
+                errors: validate.mapped(),
+                oldData: req.body
+            })
+        }
+ */
     },
 
     listado: function(req,res){
@@ -77,6 +102,24 @@ let productController = {
     },
 
     actualizar: function(req,res){
+
+
+        const validate = validationResult(req)
+
+        /* if(validate.errors.length > 0){
+        res.render('edit.ejs', {
+            errors: validate.mapped(),
+            oldData: req.body
+        })} */ //product is not defined linea 14. Sin esto se updatea bien, andan las validaciones front
+
+        let productImg
+        let imageFromBody = req.file
+        if(imageFromBody){
+            productImg = "img-product/" + req.file.originalname
+        } else {
+            productImg = "img-product/default.png"
+        } 
+
         db.Product.update({
             name: req.body.name,
             description: req.body.description,

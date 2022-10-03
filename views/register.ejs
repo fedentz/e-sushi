@@ -98,7 +98,7 @@
                 <div class="imagen-perfil">
                     <div class="form-group">
                         <label><b>Imagen de Perfil:</b></label>
-                        <input class="form-control" type="file" name="avatar">
+                        <input class="form-control" type="file" name="avatar" enctype="multipart/form-data">
                         <div class="invalid-feedback">
                             <% if(locals.errors && errors.avatar) { %>
                                 <div class="text-danger">
