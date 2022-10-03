@@ -1,4 +1,5 @@
 let db = require('../database/models')
+const { validationResult } = require("express-validator");
 
 let productController = {
     
@@ -21,7 +22,6 @@ let productController = {
     
     },
     guardado: function(req, res){
-        console.log(req.body)
         let productImg
         let imageFromBody = req.file
         if(imageFromBody){
@@ -29,6 +29,14 @@ let productController = {
         } else {
             productImg = "img-product/default.png"
         }    
+
+        const validate = validationResult(req)
+
+        if(validate.errors.length > 0){
+        res.render('create.ejs', {
+            errors: validate.mapped(),
+            oldData: req.body
+        })}
 
         db.Product.create({
             name: req.body.name,

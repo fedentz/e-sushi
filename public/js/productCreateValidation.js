@@ -12,6 +12,18 @@ window.addEventListener("load", function () {
             errores.push("El nombre debe tener al menos 5 caracteres")
         }
 
+        let priceField = document.querySelector("#price"); //use el id en vez de la clase para evitar confusion
+        if (!priceField.value.trim().length) {
+            errores.push("El precio es obligatorio");
+        }
+        
+        let descriptionField = document.querySelector("#description"); //use el id en vez de la clase para evitar confusion
+        if (!descriptionField.value.trim().length) {
+            errores.push("la desripcion es obligatoria");
+        } else if (descriptionField.value.length < 20) {
+            errores.push("La desripcion debe tener al menos 20 caracteres")
+        }
+
          if (errores.length > 0) {
               e.preventDefault();              
               for (let i = 0; i < errores.length; i++) {
