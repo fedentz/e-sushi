@@ -29,14 +29,15 @@ let productController = {
         }
 
         const validate = validationResult(req)
-
+       let category = await db.Category.findAll()
         if (validate.errors.length > 0) {
             return res.render('create.ejs', {
                 errors: validate.mapped(),
-                oldData: req.body
+                oldData: req.body,
+                category
             })
         }
-
+        
        await db.Product.create({
             name: req.body.name,
             description: req.body.description,
@@ -92,14 +93,20 @@ let productController = {
 
     },
 
-    editar:  function  (req, res) {
-        db.Product.findByPk(req.params.id, {
+    editar: async function  (req, res) {
+
+      /*   db.Product.findByPk(req.params.id, {
             include: [{ association: 'category' }]
         })
         .then(function (product) {
             res.render('edit.ejs', { product: product })
-        })
-            
+        }) */
+     let product = await db.Product.findByPk(req.params.id, {
+        include: [{ association: 'category' }]
+    })   
+    let category = await db.Category.findAll() 
+    return res.render ('edit.ejs',{category: category, product: product})
+    
     },
 
     actualizar:async function (req, res) {
