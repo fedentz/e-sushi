@@ -7,7 +7,6 @@ body('last_name').notEmpty().withMessage('Tienes que escribir un apellido').isLe
 body('phone_number').notEmpty().withMessage('Tienes que escribir un numero de telefono'),
 body('email').notEmpty().withMessage('Tienes que escribir un email').bail().isEmail().withMessage('Debes escribir un email valido'),
 body('password').notEmpty().withMessage('Tienes que escribir una password'),
-body('country').notEmpty().withMessage('Tienes que elegir un pais'),
 body('avatar').custom((value,{ req }) => {
     let file = req.file;
     let acceptedExtension = ['.jpg','.jpeg','.png','.gif'];

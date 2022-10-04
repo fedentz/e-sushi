@@ -2,106 +2,107 @@ let db = require('../database/models')
 const { validationResult } = require("express-validator");
 
 let productController = {
-    
+
     product: (req, res) => {
-        
+
         db.Product.findAll()
-        .then(function(product){
-            return res.render('productList.ejs', {product:product})
-        }) 
-        
+            .then(function (product) {
+                return res.render('productList.ejs', { product: product })
+            })
+
     },
 
-    crear: function(req, res){
-        
+    crear: function (req, res) {
+
         db.Category.findAll()
-        .then(category => {
-            return res.render('create.ejs',{category})
-            
-        })
-    
+            .then(category => {
+                return res.render('create.ejs', { category })
+
+            })
+
     },
-    guardado: async function(req, res){
-        let productImg
+    guardado: async function (req, res) {
+        let productImg = "default.png"
         let imageFromBody = req.file
-        if(imageFromBody){
-            productImg = "img-product/" + req.file.originalname
-        } else {
-            productImg = "img-product/default.png"
-        }    
+        if (imageFromBody) {
+            productImg = req.file.originalname
+        }
 
         const validate = validationResult(req)
 
-        if(validate.errors.length > 0){
-        res.render('create.ejs', {
-            errors: validate.mapped(),
-            oldData: req.body
-        })}
-
-        db.Product.create({
-            name: req.body.name,
-            description: req.body.description,
-            price: req.body.price,
-            image: productImg,
-            category_id:req.body.category_id , 
-        }).then(() =>  res.render('create.ejs') ) 
-
-       /*  const validate = validationResult(req)    
-
-        if (validate.isEmpty()){
-
-            let imageFromBody = req.file
-        if(imageFromBody){
-            productImg = "img-product/" + req.file.originalname
-        } else {
-            productImg = "img-product/default.png"
-        }
-
-            await db.Product.create({
-                name: req.body.name,
-                description: req.body.description,
-                price: req.body.price,
-                image: productImg,
-                category_id:req.body.category_id , 
-            }).then(() =>  res.redirect('/products') )
-        } else{
-            res.render('create.ejs', {
+        if (validate.errors.length > 0) {
+            return res.render('create.ejs', {
                 errors: validate.mapped(),
                 oldData: req.body
             })
         }
- */
+
+       await db.Product.create({
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            image: productImg,
+            category_id: req.body.category_id
+        })
+        return res.redirect('/products')
+
+        /*  const validate = validationResult(req)    
+ 
+         if (validate.isEmpty()){
+ 
+             let imageFromBody = req.file
+         if(imageFromBody){
+             productImg = "img-product/" + req.file.originalname
+         } else {
+             productImg = "img-product/default.png"
+         }
+ 
+             await db.Product.create({
+                 name: req.body.name,
+                 description: req.body.description,
+                 price: req.body.price,
+                 image: productImg,
+                 category_id:req.body.category_id , 
+             }).then(() =>  res.redirect('/products') )
+         } else{
+             res.render('create.ejs', {
+                 errors: validate.mapped(),
+                 oldData: req.body
+             })
+         }
+  */
     },
 
-    listado: function(req,res){
-     db.Product.findAll()
-     .then(function(product){
-        res.render('productList.ejs', {product:product})
-     })   
+    listado: function (req, res) {
+        db.Product.findAll()
+            .then(function (product) {
+                res.render('productList.ejs', { product: product })
+            })
     },
 
-    detalle: function(req,res){
+    detalle: function (req, res) {
 
 
         db.Product.findByPk(req.params.id, {
-            include: [{association: 'category'}]
+            include: [{ association: 'category' }]
         })
-        .then(function(product){
-            res.render('product.ejs', {product: product})
-        })
+            .then(function (product) {
+                res.render('product.ejs', { product: product })
+            })
 
     },
 
-    editar: function(req,res){
+    editar:  function  (req, res) {
         db.Product.findByPk(req.params.id, {
-            include: [{association: 'category'}]
+            include: [{ association: 'category' }]
         })
-        .then(function(product){
-            res.render('edit.ejs', {product: product})
+        .then(function (product) {
+            res.render('edit.ejs', { product: product })
         })
+            
     },
 
-    actualizar: function(req,res){
+    actualizar:async function (req, res) {
 
 
         const validate = validationResult(req)
@@ -112,21 +113,18 @@ let productController = {
             oldData: req.body
         })} */ //product is not defined linea 14. Sin esto se updatea bien, andan las validaciones front
 
-        let productImg
+        let productImg = "default.png"
         let imageFromBody = req.file
-        if(imageFromBody){
-            productImg = "img-product/" + req.file.originalname
-        } else {
-            productImg = "img-product/default.png"
+        if (imageFromBody) {
+            productImg = req.file.originalname
         } 
 
-        db.Product.update({
+       await db.Product.update({
             name: req.body.name,
             description: req.body.description,
             price: req.body.price,
             image: req.body.image,
-            stock: req.body.stock,
-            category_id:req.body.category_id
+            category_id: req.body.category_id
         }, {
             where: {
                 id: req.params.id
@@ -136,7 +134,7 @@ let productController = {
         res.redirect('/products/' + req.params.id)
     },
 
-    borrar: function(req,res){
+    borrar: function (req, res) {
         db.Product.destroy({
             where: {
                 id: req.params.id
