@@ -25,13 +25,24 @@ app.use(session({
 
 app.use(cookies());
 
+//Routes
 
 const mainRoute = require('./routers/main.js');
 const productRoute = require('./routers/product.js');
 const userRoute = require('./routers/userRoutes.js');
 
+//API routes
+
+const userApi = require('./routers/api/userRoutesApi')
+const productApi = require('./routers/api/productRoutesApi')
+
 app.use('/', mainRoute);
+app.use('/api/user', userApi)
+app.use('/api/product', userApi)
 app.use('/products', productRoute);
 app.use('/user', userRoute);
 
-app.listen(3030, () => console.log('Corriendo el puerto 3030'));
+//Apis
+/* app.use('/api/user', userApi) */
+
+app.listen(3030, () => {console.log('Corriendo el puerto 3030')});
