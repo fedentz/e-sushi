@@ -41,6 +41,9 @@ app.use('/api/user', userApi)
 app.use('/products', productRoute);
 app.use('/user', userRoute);
 
-
+//404
+app.use((req, res, next) => {
+    res.status(404).render("not-found");
+})
 
 app.listen(3030, () => {console.log('Corriendo el puerto 3030')});
