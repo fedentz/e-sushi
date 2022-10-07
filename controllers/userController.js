@@ -116,6 +116,15 @@ let userController = {
             user: req.session.userLogged
         });
     },
+
+    detail: (req,res) => {
+        db.Users.findByPk(req.params.id, {
+            include: [{ association: 'rol' }]
+        })
+            .then(function (user) {
+                res.render('detail.ejs', { user: user })
+            })
+    }
     /* 
         logout: (req, res) => {
             res.clearCookie('userEmail');
