@@ -34,7 +34,7 @@ module.exports = {
         allProducts.forEach(product => {
             let producto = {
                 id: product.id,
-                name: product.title,
+                name: product.name,
                 description: product.description,
                 associations: [{
                     category: {
