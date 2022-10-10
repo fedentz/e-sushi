@@ -1,4 +1,4 @@
-let db = require('../database/models')
+  let db = require('../database/models')
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require("express-validator");
 
@@ -36,6 +36,7 @@ let userController = {
                     msg: 'Este email ya esta en uso, intenta con otro'
                 }
             }
+            console.log(`halo`);
             return res.render('register.ejs', { errors: errors })
         }
         //no se guarda la img en DB (en product si)
@@ -43,6 +44,7 @@ let userController = {
         let imageFromBody = req.file
         if (imageFromBody) {
             avatarImg = req.file.originalname
+            console.log("mama")
         } 
         await db.Users.create({
             first_name: req.body.first_name,
@@ -53,7 +55,11 @@ let userController = {
             image: avatarImg,
             rol_id: 1 
         })
-        return res.redirect('/user/login')
+
+
+        .then(user=> res.redirect("/user/login"))
+        .catch(err=>console.log(err))
+
     },
 
 
@@ -124,13 +130,14 @@ let userController = {
             .then(function (user) {
                 res.render('detail.ejs', { user: user })
             })
-    }
-    /* 
-        logout: (req, res) => {
-            res.clearCookie('userEmail');
-            req.session.destroy();
-            return res.redirect('/');
-        } */
+    },
+     
+    logout: (req, res) => {
+        req.session.destroy();
+        res.clearCookie('userEmail');
+
+        return res.redirect('/user/login');
+    } 
 }
 
 

@@ -560,6 +560,9 @@ gap: 7px;
     border-radius: 15px;
     margin: auto
 }
+.button-cerrarsesion{
+    margin-top: 10px;
+}
 #div-profile-menu{
     margin-top: 50px;
     display: flex;        

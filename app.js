@@ -13,7 +13,7 @@ app.set('view engine','ejs');
 app.use(express.static(publicPath));
 
 
-/* const userLoggedMiddleware = require('./middlewares/userLoggedMw.js'); */
+const userLoggedMiddleware = require('./middlewares/userLoggedMw.js');  
 
 app.use(session({
 	secret: "Shhh, It's a secret",
@@ -21,7 +21,7 @@ app.use(session({
 	saveUninitialized: false,
 }));
 
-/* app.use(userLoggedMiddleware); */
+app.use(userLoggedMiddleware);  
 
 app.use(cookies());
 

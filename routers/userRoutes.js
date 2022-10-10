@@ -33,6 +33,6 @@ router.get('/profile', authMiddleware, usersControllers.profile);
 router.get('/:id', authMiddleware, usersControllers.detail);
 
 // Logout
-/* router.get('/logout/', usersControllers.logout); */
+router.post('/logout', usersControllers.logout);
 
 module.exports = router;
