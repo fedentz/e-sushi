@@ -36,6 +36,8 @@ module.exports = {
                 id: product.id,
                 name: product.name,
                 description: product.description,
+                price: product.price,
+                image: product.image,
                 associations: [{
                     category: {
                         category: product.category
