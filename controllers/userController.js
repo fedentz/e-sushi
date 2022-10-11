@@ -125,7 +125,8 @@ let userController = {
                 res.render('detail.ejs', { user: user })
             })
     }
-    /* 
+    /* ,
+    
         logout: (req, res) => {
             res.clearCookie('userEmail');
             req.session.destroy();

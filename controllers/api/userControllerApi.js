@@ -18,6 +18,7 @@ module.exports = {
             first_name: user.first_name,
             last_name: user.last_name,
             email: user.email,
+            image: user.image,
             detail: "http://localhost:3030/user/" + user.id 
         }
         infoUser.push(PushUsuario)
