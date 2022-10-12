@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <%- include('./partials/head') %>
 
-<body>
-    <%- include('./partials/header') %>
-    <main></main>
-    <h2>Este producto es <%= product.name %> </h2>
-    </main>
+<%- include('./partials/head') %>
+
+    <body class="background-image-productList">
+        <%- include('./partials/header') %>
+            <main>
+                <div class="full-product">
+                    <div class="div-image-product">
+                        <img class="image-product" src="/images/uploads/<%= product.image %>">
+                    </div>
+                    <div class="texto-product-desc">
+                        <h2>
+                            <%= product.name %>
+                        </h2>
+                        <h4>Precio:</h4>
+                        <p>$<%= product.price %>
+                        </p>
+                        <h4>
+                            <%= product.description %>
+                        </h4>
+                    </div>
+                </div>
+            </main>
 
 
 
-    <%- include('./partials/footer') %>
-    <%- include('./partials/boton-flotante') %>
-</body>
+            <%- include('./partials/footer') %>
+                <%- include('./partials/boton-flotante') %>
+    </body>
+
 </html>

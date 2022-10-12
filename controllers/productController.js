@@ -25,7 +25,7 @@ let productController = {
         let productImg = "default.png"
         let imageFromBody = req.file
         if (imageFromBody) {
-            productImg = req.file.originalname
+            productImg = req.file.filename
         }
 
         const validate = validationResult(req)
