@@ -43,7 +43,7 @@ let userController = {
         let avatarImg = "default.png"
         let imageFromBody = req.file
         if (imageFromBody) {
-            avatarImg = req.file.originalname
+            avatarImg = req.file.filename
             console.log("mama")
         } 
         await db.Users.create({
