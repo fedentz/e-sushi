@@ -6,12 +6,12 @@
 <body class="background-image-profile">
     <%- include('./partials/header') %>
     <main>
-    <h2 id="text-profile">¡Bienvenid@!</h2>
+    <h2 id="text-profile">¡Bienvenido <%= locals.userLogged.first_name%>!</h2>
     <div id="div-profile-menu">
         <div class="carta">
             <div class="d-flex flex-column align-items-center text-center">
-                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
-            <h4 class="nombre-usuario">NOMBRE USUARIO</h4>
+                <img src="../images/avatars/<%=locals.userLogged.image%>" alt="Admin" class="rounded-circle" width="150">
+            <h4 class="nombre-usuario"</h4>
             </div>
         </div>
     </div>                    
