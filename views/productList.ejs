@@ -6,9 +6,10 @@
     <body class="background-image-productList">
         <%- include('./partials/header') %>
             <main>
+                <h1 class="h1-productList">Menú</h1>
                 <div class="general-productList">
                     <% for (let i=0 ; i < product.length ; i++) { %>
-                        <div>
+                        <div class="flex-por-product">
                             <a href="/products/<%=product[i].id%>" style="text-decoration: none">
                                 <div class="producto-de-list">
                                     <div class="div-img-producto-de-list">
