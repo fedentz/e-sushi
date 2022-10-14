@@ -6,10 +6,13 @@
          <ul style="list-style: none;">
             <% if (locals.isLogged) { %>
                 <img src="../images/avatars/<%=locals.userLogged.image%>" alt="Admin" class="rounded-circle" width="40" style="border-radius: 100%">
+                <li><a href="/products/create">Crear producto</a></li>
+                <li><a href="/products">Menu</a></li>
+                <li><a href="/eventos">Eventos</a></li>
                 <li><a href="/user/profile">Perfil</a></li>
-                <li><a href="/menu">Menu</a></li>
             <% } else { %>
-                <li><a href="/menu">Menu</a></li>
+                <li><a href="/products">Menu</a></li>
+                <li><a href="/eventos">Eventos</a></li>
                 <li><a href="/user/login">Iniciar Sesión</a></li>
                 <li><a href="/user/register">Registrarme</a></li>
 

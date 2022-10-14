@@ -6,8 +6,8 @@ const controlador = {
     menu: (req, res) => {
         res.render("menu.ejs")
     },
-    carrito: (req, res) => {
-        res.render('carrito.ejs')
+    contacto: (req, res) => {
+        res.render('contacto.ejs')
     },
     register: (req, res) => {
         res.render('register.ejs')

@@ -7,5 +7,6 @@ router.get("/", mainController.index);
 router.get("/eventos", mainController.eventos);
 router.get("/menu", mainController.menu);
 router.get("/perfil", mainController.perfil)
+router.get('/contacto', mainController.contacto)
 
 module.exports = router;

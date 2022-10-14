@@ -124,7 +124,34 @@ footer p{
 .social{
     font-size: 2em;
     margin-left: 5%;
+    
 }
+.social-ig{
+    font-size: 2em;
+    margin-left: 5%;
+    color: white;
+}
+
+.social-fc{
+    font-size: 2em;
+    margin-left: 5%;
+    color: white;
+}
+.fab fa-facebook{
+    color: white;
+}
+.fab fa-twitter {
+color: white;
+}
+.fab fa-instagram{
+    color: white;
+}
+.social-tw{
+    font-size: 2em;
+    margin-left: 5%;
+    color: white;
+}
+
 .boton-flotante{
    position: fixed;
     z-index: 56;
@@ -140,12 +167,18 @@ footer p{
     border: solid 1px darkred;
     border-radius: 50%;
     width: 80px;
-    height: 80px;   
+    height: 80px; 
 }
 
 .boton-pedido:hover{
-    zoom: 250%;
-    transition-duration: 3s;
+    transition-property: all;
+    transition-duration: 700ms; 
+    background-color: white;
+    color: red;
+    width: 160px;
+    height: 160px;
+    font-size: 20px;
+   
 }
 
 .footer-box{
