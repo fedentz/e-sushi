@@ -14,8 +14,6 @@ function userLoggedMw(req, res, next) {
 		if (userFromCookie) {
 			req.session.userLogged = userFromCookie;
 		}
-	
-		
 	}
 	
 	next();

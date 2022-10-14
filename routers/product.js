@@ -5,6 +5,8 @@ const multer = require('multer');
 const path = require('path')
 const validations = require('../middlewares/productValidateMw');
 const editValidations = require('../middlewares/editProductValidationMw')
+const adminMw = require('../middlewares/adminMw')
+const loggedMw = require('../middlewares/loggedMw')
 
 // controller
 const productController = require("../controllers/productController")
@@ -26,10 +28,10 @@ let upload = multer({ storage: storage })
 
 // RUTAS DE PRODUCTOS
 //formulario de creacion
-router.get('/create', productController.crear);
+router.get('/create',adminMw,loggedMw, productController.crear);
 
 //formulario de edicion de producto 
-router.get('/:id/edit', productController.editar)
+router.get('/:id/edit',adminMw,loggedMw, productController.editar)
 // listado de productos
 router.get('/', productController.product);
 
