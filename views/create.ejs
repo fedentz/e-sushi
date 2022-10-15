@@ -20,7 +20,7 @@
                     
                      <div class="row product-detail">
                         <div class="col-12 col-md-6">
-                            <label for="name" class="form-label">Nombre del producto:</label>
+                            <label for="name" class="form-label"><strong>Nombre del producto:</strong></label>
                             <input type="text" id="name" name="name" placeholder="Ej:Tabla de salmon" class="form-input vista-create-input">
                             <% if(locals.errors && errors.name) { %>
                                 <div class="text-danger">
@@ -29,7 +29,7 @@
                             <% } %>
                         </div>
                         <div class="col-12 col-md-6">
-                            <label for="image" class="form-label">Imagen del producto:</label>
+                            <label for="image" class="form-label"><strong> Imagen del producto:</strong></label>
                             <input type="file" id="image" name="image" placeholder="Ej: Image.jpg" class="form-input vista-create-input" enctype="multipart/form-data">
                             <% if(locals.errors && errors.image) { %>
                                 <div class="text-danger">
@@ -38,8 +38,8 @@
                             <% } %>
                         </div>
                         <div class="col-12 col-md-6">
-                            <label for="price" class="form-label">Precio del producto:</label>
-                            <input type="text" id="price" name="price" placeholder="Ej: 1700" class="form-input vista-create-input-precio">
+                            <label for="price" class="form-label"><strong>Precio del producto:</strong></label>
+                            <input type="text" id="price" name="price" placeholder="Ej: 1700" class="form-input vista-create-input">
                             <% if(locals.errors && errors.price) { %>
                                 <div class="text-danger">
                                     <%= errors.price.msg %>
@@ -47,7 +47,7 @@
                             <% } %>
                         </div>
                         <div class="col-12 col-md-6">
-                            <label for="category" class="form-label">Categoría:</label>
+                            <label for="category" class="form-label"><strong>Categoría:</strong></label>
                             <select name="category_id" id="category" class="form-input">
                                 <% if (locals.category) { %>
                                     <% for (let i=0; i < locals.category.length; i++) { %>

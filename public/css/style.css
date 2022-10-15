@@ -1,19 +1,19 @@
-body{
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-html{
- position: relative;
+html {
+    position: relative;
 }
 
-main{
+main {
     margin-bottom: 150px;
     margin-top: 150px;
 }
 
-header{
+header {
     background-color: black;
     color: white;
     position: sticky;
@@ -21,71 +21,80 @@ header{
     width: 100%;
     max-height: 250px;
 }
-.header-mobile{
+
+.header-mobile {
     display: flex;
-    justify-content: space-around;  
-    height: 100%;  
-   margin: auto;
-}
-.burger-menu{
-    text-align: center;
-  
-    width: 30%;
-    right: 30px;
-    
-}
-.header-caja-madre{
-   align-items: center;
-   display: flex;
-   justify-content: space-around; 
-   margin: auto;
-   position: fixed;  
-   max-height: 150px;
-   background-color: #000000;
-   width: 100%;
-   left: 0 ;
+    justify-content: space-around;
+    height: 100%;
+    margin: auto;
 }
 
-article{
+.burger-menu {
+    text-align: center;
+
+    width: 30%;
+    right: 30px;
+
+}
+
+.header-caja-madre {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    position: fixed;
+    max-height: 150px;
+    background-color: #000000;
+    width: 100%;
+    left: 0;
+}
+
+article {
     width: 90%;
     margin: 0 auto;
 }
 
-.body-menu{
+.body-menu {
     background-color: black;
 }
- .imagen-producto{
+
+.imagen-producto {
     width: 90%;
-    margin:  auto;
+    margin: auto;
     text-align: center;
     margin: 10px,
- }
- .imagen-producto-menu img{
+}
+
+.imagen-producto-menu img {
     width: 100%;
- }
- .imagen-producto-menu img:hover{
+}
+
+.imagen-producto-menu img:hover {
     transform: scale(1.5);
     transition-duration: 5s
- }
+}
 
- .blackbg{
-     background-color: black;
-     color: #ebebeb;
-     background-color: black;
- }
- .whitebg{
-     background-color: white;
-     padding-bottom: 10px;
- }
- .productos{
+.blackbg {
+    background-color: black;
+    color: #ebebeb;
+    background-color: black;
+}
+
+.whitebg {
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+.productos {
     text-align: center;
- }
-body{
+}
+
+body {
     margin: 0;
     padding: 0;
 }
 
-.burger{
+.burger {
     color: white;
     background-color: black;
     font-size: 2em;
@@ -96,70 +105,78 @@ body{
     right: 40px;
 }
 
-.navbar{
+.navbar {
     display: none;
 }
+
 .blackbg .ver-mas-boton {
     background-color: #000000;
-    border-right:solid white;
-    border-left: white solid ;
+    border-right: solid white;
+    border-left: white solid;
     color: white;
     border-top: none;
     border-bottom: none;
 }
+
 .whitebg .ver-mas-boton {
     background-color: #ffffff;
-    border-right:solid #000000;
-    border-left: #000000 solid ;
+    border-right: solid #000000;
+    border-left: #000000 solid;
     color: #000000;
     border-top: none;
     border-bottom: none;
 }
-footer p{
+
+footer p {
     color: white;
     font-style: italic;
     font-weight: lighter;
 }
 
-.social{
+.social {
     font-size: 2em;
     margin-left: 5%;
-    
+
 }
-.social-ig{
+
+.social-ig {
     font-size: 2em;
     margin-left: 5%;
     color: white;
 }
 
-.social-fc{
+.social-fc {
     font-size: 2em;
     margin-left: 5%;
     color: white;
 }
-.fab fa-facebook{
+
+.fab fa-facebook {
     color: white;
 }
+
 .fab fa-twitter {
-color: white;
-}
-.fab fa-instagram{
     color: white;
 }
-.social-tw{
+
+.fab fa-instagram {
+    color: white;
+}
+
+.social-tw {
     font-size: 2em;
     margin-left: 5%;
     color: white;
 }
 
-.boton-flotante{
-   position: fixed;
+.boton-flotante {
+    position: fixed;
     z-index: 56;
     right: 50px;
     bottom: 120px;
 }
 
-.boton-pedido{
+.boton-pedido {
     display: block;
     cursor: pointer;
     background-color: black;
@@ -167,35 +184,37 @@ color: white;
     border: solid 1px darkred;
     border-radius: 50%;
     width: 80px;
-    height: 80px; 
+    height: 80px;
 }
 
-.boton-pedido:hover{
+.boton-pedido:hover {
     transition-property: all;
-    transition-duration: 700ms; 
+    transition-duration: 700ms;
     background-color: white;
     color: red;
     width: 160px;
     height: 160px;
     font-size: 20px;
-   
+
 }
 
-.footer-box{
+.footer-box {
     padding-top: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.logo{
+
+.logo {
     width: 150px;
     height: 150px;
     padding: 0%;
     margin: auto;
-    
-} 
-.log-in{
-  
+
+}
+
+.log-in {
+
     padding: 5px;
     flex-wrap: wrap;
     width: 80%;
@@ -203,119 +222,92 @@ color: white;
     justify-content: center;
     align-items: center;
     margin-top: 25px;
-  
-   height: 100%;
+
+    height: 100%;
 
 }
-.ingresar{
+
+.ingresar {
     align-items: center;
     height: 100%;
     background-color: gainsboro;
     justify-content: center;
     margin: auto;
     text-align: center;
-   
+
     padding: 15px;
     margin-top: 5px;
     width: 100%;
     height: 100%;
 }
-.llenar{
- align-items: center;
- justify-content: center;
- padding: 10px;
- text-align: center;
- width: 70%;
- border: none;
- display: flex;
 
- margin: auto;
- margin-top: 10px;
+.llenar {
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    width: 70%;
+    border: none;
+    display: flex;
+
+    margin: auto;
+    margin-top: 10px;
 }
 
-footer{
-width: 100%;
-padding-bottom: 10px;
-background-color: black;
-justify-content: center;
-text-align: center;
-align-items: center;
-bottom: 0;
-left: 0;
-position: absolute;
-max-height: 250px;
-margin-top: auto;
+footer {
+    width: 100%;
+    padding-bottom: 10px;
+    background-color: black;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    max-height: 250px;
+    margin-top: auto;
 }
-.enviar-boton{
+
+.enviar-boton {
     margin: 10px;
 }
-#registro-titulo{
+
+#registro-titulo {
     padding-top: 10px;
 }
-#create-titulo{
+
+#create-titulo {
     padding-top: 10px;
     margin: 0 auto;
     margin-bottom: 15px;
 }
-.text-danger{
-    color:rgb(182, 13, 13)
+
+.text-danger {
+    color: rgb(182, 13, 13)
 }
-.registro{
+
+.registro {
     color: red;
     text-decoration: none;
     padding: 3px;
 }
 
-.eventos-texto{
+.eventos-texto {
     font-size: 16px;
     text-align: center;
-    color: white;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-#eventos-titulo{
+
+#eventos-titulo {
     font-size: 25px;
-    color: white;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.facebook-boton{
-justify-content: center;
-margin-top:10px;
-font-size: 10px;
-text-align: center;
-align-items: center;
-background-color: blue;
-width: 73%;
-color: white;
-padding: 10px;
-border: none;
-display: flex;
-margin: auto;
-gap: 7px;
-}
-.body-eventos{
-    background-color: black;
-}
-.registro-full{
-    margin-left: 20px;
-    margin-right: 20px;
-    background-color: #ebebeb;
-    text-align: center;
-}
-.register-full{
-    margin-left: 20px;
-    margin-right: 20px;
-    background-color: #ebebeb;
-    text-align: center;
-}
-.login-full{
-    margin-left: 20px;
-    margin-right: 20px;
-    background-color: #ebebeb;
-    text-align: center;
-}
-#registro-facebook{
+
+.facebook-boton {
     justify-content: center;
-    margin-top:10px;
+    margin-top: 10px;
     font-size: 10px;
     text-align: center;
     align-items: center;
@@ -328,21 +320,49 @@ gap: 7px;
     margin: auto;
     gap: 7px;
 }
-#registro-name{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: none;
-    padding: 10px;
-    width: 60%;
+
+.body-eventos {
+    background-color: black;
 }
-.vista-create-input{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: none;
-    padding: 10px;
-    width: 60%;
+
+.registro-full {
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #ebebeb;
+    text-align: center;
 }
-#registro-mail{
+
+.register-full {
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #ebebeb;
+    text-align: center;
+}
+
+.login-full {
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #ebebeb;
+    text-align: center;
+}
+
+#registro-facebook {
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 10px;
+    text-align: center;
+    align-items: center;
+    background-color: blue;
+    width: 73%;
+    color: white;
+    padding: 10px;
+    border: none;
+    display: flex;
+    margin: auto;
+    gap: 7px;
+}
+
+#registro-name {
     margin-top: 15px;
     margin-bottom: 15px;
     border: none;
@@ -350,24 +370,43 @@ gap: 7px;
     width: 60%;
 }
 
-#registro-mail-2{
+.vista-create-input {
     margin-top: 15px;
     margin-bottom: 15px;
     border: none;
     padding: 10px;
     width: 60%;
 }
-#registro-password{
+
+#registro-mail {
     margin-top: 15px;
     margin-bottom: 15px;
     border: none;
     padding: 10px;
     width: 60%;
 }
-#registro-p{
+
+#registro-mail-2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    padding: 10px;
+    width: 60%;
+}
+
+#registro-password {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    padding: 10px;
+    width: 60%;
+}
+
+#registro-p {
     font-size: 12px;
 }
-#registro-button{
+
+#registro-button {
     padding: 15px;
     color: white;
     background-color: black;
@@ -376,7 +415,8 @@ gap: 7px;
     width: 60%;
     margin-bottom: 5px;
 }
-#create-button{
+
+#create-button {
     padding: 15px;
     color: white;
     background-color: black;
@@ -386,7 +426,8 @@ gap: 7px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
-.products{
+
+.products {
     margin-left: auto;
     margin-top: 5%;
     display: flex;
@@ -396,17 +437,21 @@ gap: 7px;
     align-items: flex-start;
     margin-right: auto;
 }
-#combinadas{
+
+#combinadas {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-#ejecutivo{
+
+#ejecutivo {
     padding-bottom: 15px;
 }
-#entradas{
+
+#entradas {
     padding-bottom: 45px;
 }
-.information{
+
+.information {
     width: 175%;
     display: flex;
     flex-wrap: wrap;
@@ -417,36 +462,42 @@ gap: 7px;
     margin-right: 175px;
 
 }
-.name{
+
+.name {
     width: 10%;
     margin-left: 2%;
     text-align: center;
 }
-.price{
+
+.price {
     width: 10%;
     text-align: center;
 }
-.delivery{
+
+.delivery {
     width: 10%;
     text-align: center;
 }
-.quantitiy{
+
+.quantitiy {
     width: 10%;
     background-color: #b3b6b2f6;
     text-align: center;
 }
 
-.cart_final{
+.cart_final {
     text-align: left;
     margin-left: 1%;
 }
-.pay{
+
+.pay {
     text-align: right;
     margin-bottom: 40px;
     margin-right: 3%;
 
 }
-.button{
+
+.button {
     background-color: #000000;
     color: white;
     position: relative;
@@ -456,7 +507,7 @@ gap: 7px;
 
 }
 
-.button_red{
+.button_red {
     background-color: rgb(182, 13, 13);
     color: white;
     position: relative;
@@ -466,7 +517,8 @@ gap: 7px;
     margin-left: 1%;
 
 }
-.home-section1{
+
+.home-section1 {
     width: 100%;
     position: relative;
 }
@@ -476,42 +528,47 @@ gap: 7px;
     height: 100%;
 }
 
-.home-section1 h1{
+.home-section1 h1 {
     z-index: 2;
     position: absolute;
     top: 20%;
     left: 50%;
     color: #ebebeb;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
-    transform: translate( -50%, -50%);
+    transform: translate(-50%, -50%);
     box-sizing: border-box;
     text-align: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-#h1-home{
+
+#h1-home {
     font-size: 18px;
 }
-.home-section2{
+
+.home-section2 {
     width: 90%;
     text-align: center;
     margin: 0 auto;
 
 }
-.products-title{
+
+.products-title {
     margin-top: 15px;
     margin-bottom: 15px;
     border: none;
     width: 60%;
     padding-top: 10px;
 }
-.form-input-edit{
+
+.form-input-edit {
     margin-top: 15px;
     margin-bottom: 15px;
     border: none;
     padding: 10px;
     width: 60%;
 }
-.buy-now-button-edit{
+
+.buy-now-button-edit {
     padding: 15px;
     color: white;
     background-color: black;
@@ -520,7 +577,8 @@ gap: 7px;
     width: 60%;
     margin-bottom: 5px;
 }
-.buy-now-button-delete{
+
+.buy-now-button-delete {
     padding: 5px;
     color: white;
     background-color: #800000;
@@ -528,67 +586,79 @@ gap: 7px;
     width: 40%;
     margin-bottom: 5px;
 }
-#box-edit{
+
+#box-edit {
     margin-left: 20px;
     margin-right: 20px;
     background-color: #ebebeb;
     text-align: center;
     margin-bottom: 10px;
 }
-#box-create{
+
+#box-create {
     margin-left: 20px;
     margin-right: 20px;
-    background-color: #ebebeb;
+    background: rgba(255, 255, 255, .4);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
     text-align: center;
     margin-bottom: 10px;
 }
-#titular-edit{
+
+#titular-edit {
     text-align: center;
     width: 100%;
 }
-.descripcion-edit{
+
+.descripcion-edit {
     display: flex;
     flex-direction: column;
     padding: 10px;
 }
-.form-edit{
+
+.form-edit {
     padding: 5px;
 }
-.image-edit{
+
+.image-edit {
     margin-top: 15px;
     margin-bottom: 15px;
     border: none;
     padding-top: 10px;
 }
-.background-image{
+
+.background-image {
     background-image: url(/images/_DSC5277.JPG);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
 }
-.background-image-profile{
+
+.background-image-profile {
     background-image: url(/images/FOTOSUSHI13.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
 }
-.background-image-productList{
+
+.background-image-productList {
     background-image: url(/images/Background-image-repeat.jpg);
     background-repeat: repeat;
 
 }
-.form-group{
+
+.form-group {
     margin-bottom: 10px;
 }
 
-#text-profile{
+#text-profile {
     margin-top: 100px;
     color: white;
     text-align: center;
 }
-#button-profile-menu{
+
+#button-profile-menu {
     display: flex;
     padding: 10px;
     color: white;
@@ -598,75 +668,91 @@ gap: 7px;
     border-radius: 15px;
     margin: auto
 }
-.button-cerrarsesion{
+
+.button-cerrarsesion {
     margin-top: 10px;
 }
-#div-profile-menu{
+
+#div-profile-menu {
     margin-top: 50px;
-    display: flex;        
+    display: flex;
     justify-content: center;
 }
-#main-index{
+
+#main-index {
     background-color: #000000;
-}
-#body-index{
-    background-color: #000000;
-}
-#H2-nosotros{
-    color: white;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-#p-nosotros{
-    font-size: 16px;
-    color: white;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.nombre-usuario{
+#body-index {
+    background-color: #000000;
+}
+
+#H2-nosotros {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#p-nosotros {
+    font-size: 16px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.nombre-usuario {
     color: white
 }
-.p-contacto-1{
+
+.p-contacto-1 {
     width: 50%;
     font-size: 16px;
     color: white;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.p-contacto-2{
+
+.p-contacto-2 {
     width: 50%;
     font-size: 16px;
     color: white;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.h2-contacto{
+
+.h2-contacto {
     color: white;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.division-texto-contacto{
+
+.division-texto-contacto {
     width: 100%;
     display: flex;
     color: #fff;
     margin: auto;
     padding: 10px;
 }
-.texto-contacto{
+
+.texto-contacto {
     text-align: center;
 }
-.contacto{
+
+.contacto {
     margin-top: 40px;
 }
-.error-h1{
+
+.error-h1 {
     color: white;
 }
-.error-body{
+
+.error-body {
     background-color: #000000;
 }
-#box-error{
+
+#box-error {
     background-color: #000000;
     margin-left: 20px;
     margin-right: 20px;
     text-align: center;
     margin-bottom: 10px;
 }
+
 .producto-de-list {
     margin: 10px 0px;
     border-top: 1px;
@@ -681,6 +767,7 @@ gap: 7px;
     object-fit: cover;
     margin: 0 auto;
 }
+
 .general-productList {
     width: 90%;
     align-self: center;
@@ -696,35 +783,42 @@ gap: 7px;
     padding: 15px;
     position: relative;
 }
-.product-name-list{
+
+.product-name-list {
     text-decoration: none;
     color: white;
     font-size: 20px;
 }
-.product-description-list{
-    color: white;
-    text-decoration: none;
-}
-.product-price-list{
+
+.product-description-list {
     color: white;
     text-decoration: none;
 }
 
-.image-product{
+.product-price-list {
+    color: white;
+    text-decoration: none;
+}
+
+.image-product {
     width: 100%;
 }
-.div-price-icon{
+
+.div-price-icon {
     display: flex;
     width: 100%;
 }
-.div-price{
+
+.div-price {
     width: 50%;
 }
-.div-icon-productList{
-    width:50%;
+
+.div-icon-productList {
+    width: 50%;
     align-content: flex-end;
 }
-.fa-cart-plus{
+
+.fa-cart-plus {
     color: white;
     font-size: 16px;
     border: solid 1px #800000;
@@ -735,7 +829,8 @@ gap: 7px;
     right: 15px;
     bottom: 30px;
 }
-.fa-plus-circle{
+
+.fa-plus-circle {
 
     color: #800000;
     font-size: 40px;
@@ -744,7 +839,8 @@ gap: 7px;
     position: relative;
     top: 20px;
 }
-.fa-chevron-circle-left{
+
+.fa-chevron-circle-left {
     color: #800000;
     font-size: 35px;
     border-radius: 50%;
@@ -753,7 +849,8 @@ gap: 7px;
     left: 15px;
     top: 15px;
 }
-.full-product{
+
+.full-product {
     background-color: black;
     width: 90%;
     margin: 0 auto;
@@ -762,178 +859,232 @@ gap: 7px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.texto-product-desc{
+
+.texto-product-desc {
     text-align: center;
     color: white;
 }
-.product-name1{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+.product-name1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.line-product{
+
+.line-product {
     width: 80%;
     height: 2px;
     position: relative;
     background: #fff;
     margin: 0 auto;
 }
-.h1-productList{
+
+.h1-productList {
     color: white;
     text-align: center;
     position: static;
     top: -175px;
 }
+.eventos-img {
+    background-image: url(/images/Img-evento-movil.jpg);
+    background-size:cover;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 85px;
+    padding-bottom: 25px;
+}
+.eventos-pantalla{
+    background: rgba(255, 255, 255, .4);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
+    border: solid #000000;
+}
+#button-eventos-contacto{
+    display: flex;
+    padding: 10px;
+    color: white;
+    background-color: #800000;
+    border: none;
+    border-radius: 15px;
+    margin: 40px auto 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, .4);
+}
+#button-eventos-contacto:hover{
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, .4);
+}
+.img-contacto{
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+
+}
 @media (min-width: 500px) {
 
-    .flex-por-product{
+    .flex-por-product {
         width: 45%;
         margin: 0 auto;
     }
+
     .general-productList {
         width: 100%;
         display: flex;
         flex-direction: row;
     }
-    .image-product{
+
+    .image-product {
         width: 70%;
-        margin:auto;
-        display:block;
+        margin: auto;
+        display: block;
     }
-    .full-product{
+
+    .full-product {
         width: 80%;
     }
 }
+
 @media (min-width: 768px) {
 
-    header{
+    header {
         max-height: 180px;
     }
 
-    .burger-menu{
-        display:none
+    .burger-menu {
+        display: none
     }
-    .header-caja-madre{
+
+    .header-caja-madre {
         display: flex;
         justify-content: space-between;
         width: 100%;
     }
-    .logo{
+
+    .logo {
         width: 100%;
     }
-    .navbar{
+
+    .navbar {
         margin-right: 15px;
         display: flex;
         width: 50%;
         justify-content: flex-end;
     }
-    #h1-home{
+
+    #h1-home {
         font-size: 30px;
     }
+
     .navbar li {
         color: white;
-        display:inline;
+        display: inline;
         margin: 0 15px;
     }
-    .navbar li :hover{
+
+    .navbar li :hover {
         transition: all 400ms;
         color: red;
         border-bottom: red solid;
     }
-    .navbar a{
+
+    .navbar a {
         color: white;
-        text-decoration: none; 
+        text-decoration: none;
     }
-    .main-eventos{
-        background-image: url(/images/Fondo-para-texto-eventos.jpg);
-        background-color: white;
-        margin-top: 150px;
-        width: 100%;
-        height: 100%;
-        display: flex;
-    }
-    #p-nosotros{
+
+    #p-nosotros {
         font-size: 22px;
     }
-    #eventos-titulo{
+
+    #eventos-titulo {
         color: black;
     }
-    .eventos-texto{
+
+    .eventos-texto {
         width: 50%;
         display: block;
         color: #000000;
         margin: auto;
         padding: 10px;
     }
-    .eventos-img{
-        width: 50%;
+
+    .eventos-img {
+        width: 100%;
     }
-    .body-eventos{
+
+    .body-eventos {
         background-color: #000000;
     }
-    .eventos-texto{
+
+    .eventos-texto {
         font-size: 22px;
         text-align: center;
         color: black;
-        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
- .background-login{
+
+    .background-login {
         background-image: url(/grupo_8_e-sushi/public/images/sushi-fondo.jpeg);
         background-attachment: fixed;
     }
-.blackbg{
-width: 100%;
-display: flex;
-flex-wrap: wrap;
-gap: 4%;
-justify-content: center;
-}
 
-.whitebg{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4%;
-    justify-content: center;
+    .blackbg {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4%;
+        justify-content: center;
     }
 
-.productos{
-    width: 40%;
-    gap: 7px;
-    text-align: center;
-}
-#main-edit{
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-}
-#box-edit{
-    width: 45%;
-    margin: 0 auto;
-}
-#box-create{
-    width: 75%;
-    margin: 0 auto;
-}
-.img-error{
-    width: 30%;
-    height: 30%;
-}
-.flex-por-product{
-    display: block;
-    width: 25%;
-}
-.general-productList {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7%;
-}
-.image-product{
-    width: 70%;
-    margin:auto;
-    display:block;
-}
-.full-product{
-    width: 50%;
-}
-}
+    .whitebg {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4%;
+        justify-content: center;
+    }
 
+    .productos {
+        width: 40%;
+        gap: 7px;
+        text-align: center;
+    }
+
+    #main-edit {
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    #box-edit {
+        width: 45%;
+        margin: 0 auto;
+    }
+
+    #box-create {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .img-error {
+        width: 30%;
+        height: 30%;
+    }
+
+    .flex-por-product {
+        display: block;
+        width: 25%;
+    }
+
+    .general-productList {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7%;
+    }
+
+    .image-product {
+        width: 70%;
+        margin: auto;
+        display: block;
+    }
+
+    .full-product {
+        width: 50%;
+    }
+}
