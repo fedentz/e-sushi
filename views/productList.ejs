@@ -7,8 +7,112 @@
         <%- include('./partials/header') %>
             <main>
                 <h1 class="h1-productList">Menú</h1>
+                <h2 class="h2-product-list">Entradas</h2>
+                <div class="line-product"></div>
                 <div class="general-productList">
-                    
+                    <% for (let i=0 ; i < product.length ; i++) { %>
+                        <% if (product[i].category_id==6) { %>
+                            <div class="flex-por-product">
+                                <a href="/products/<%=product[i].id%>" style="text-decoration: none">
+                                    <div class="producto-de-list">
+                                        <div class="div-img-producto-de-list">
+                                            <img class="img-producto-de-list"
+                                                src="/images/uploads/<%= product[i].image %>">
+                                        </div>
+                                        <div class="line-product"></div>
+                                        <div class="detalles-productList">
+                                            <div>
+                                                <h2 class="product-name-list">
+                                                    <%= product[i].name %>
+                                                </h2>
+                                            </div>
+                                            <div class="div-price-icon">
+                                                <div class="div-price">
+                                                    <h4 class="product-price-list">$<%= product[i].price %>
+                                                    </h4>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <% } else {%>
+                                <% } %>
+                                    <% } %>
+                </div>
+                <h2 class="h2-product-list">Sashimi</h2>
+                <div class="line-product"></div>
+                <div class="general-productList">
+                    <% for (let i=0 ; i < product.length ; i++) { %>
+                        <% if (product[i].category_id==2) { %>
+                            <div class="flex-por-product">
+                                <a href="/products/<%=product[i].id%>" style="text-decoration: none">
+                                    <div class="producto-de-list">
+                                        <div class="div-img-producto-de-list">
+                                            <img class="img-producto-de-list"
+                                                src="/images/uploads/<%= product[i].image %>">
+                                        </div>
+                                        <div class="line-product"></div>
+                                        <div class="detalles-productList">
+                                            <div>
+                                                <h2 class="product-name-list">
+                                                    <%= product[i].name %>
+                                                </h2>
+                                            </div>
+
+                                            <div class="div-price-icon">
+                                                <div class="div-price">
+                                                    <h4 class="product-price-list">$<%= product[i].price %>
+                                                    </h4>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <% } else {%>
+                                <% } %>
+                                    <% } %>
+                </div>
+                <h2 class="h2-product-list">Geisha</h2>
+                <div class="line-product"></div>
+                <div class="general-productList">
+                    <% for (let i=0 ; i < product.length ; i++) { %>
+                        <% if (product[i].category_id==3) { %>
+                            <div class="flex-por-product">
+                                <a href="/products/<%=product[i].id%>" style="text-decoration: none">
+                                    <div class="producto-de-list">
+                                        <div class="div-img-producto-de-list">
+                                            <img class="img-producto-de-list"
+                                                src="/images/uploads/<%= product[i].image %>">
+                                        </div>
+                                        <div class="line-product"></div>
+                                        <div class="detalles-productList">
+                                            <div>
+                                                <h2 class="product-name-list">
+                                                    <%= product[i].name %>
+                                                </h2>
+                                            </div>
+                                            <div class="div-price-icon">
+                                                <div class="div-price">
+                                                    <h4 class="product-price-list">$<%= product[i].price %>
+                                                    </h4>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <% } else {%>
+                                <% } %>
+                                    <% } %>
+                </div>
+                <h2 class="h2-product-list">Nigiri</h2>
+                <div class="line-product"></div>
+                <div class="general-productList">
                     <% for (let i=0 ; i < product.length ; i++) { %>
                         <% if (product[i].category_id==1) { %>
                             <div class="flex-por-product">
@@ -30,219 +134,150 @@
                                                     <h4 class="product-price-list">$<%= product[i].price %>
                                                     </h4>
                                                 </div>
-                                                <div class="div-icon-productList">
-                                                    <i class="fas fa-cart-plus"></i>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <% } else {%>
+                                <% } %>
+                                    <% } %>
+                </div>
+                <h2 class="h2-product-list">Rolls</h2>
+                <div class="line-product"></div>
+                <div class="general-productList">
+                    <% for (let i=0 ; i < product.length ; i++) { %>
+                        <% if (product[i].category_id==5) { %>
+                            <div class="flex-por-product">
+                                <a href="/products/<%=product[i].id%>" style="text-decoration: none">
+                                    <div class="producto-de-list">
+                                        <div class="div-img-producto-de-list">
+                                            <img class="img-producto-de-list"
+                                                src="/images/uploads/<%= product[i].image %>">
+                                        </div>
+                                        <div class="line-product"></div>
+                                        <div class="detalles-productList">
+                                            <div>
+                                                <h2 class="product-name-list">
+                                                    <%= product[i].name %>
+                                                </h2>
+                                            </div>
+                                            <div class="div-price-icon">
+                                                <div class="div-price">
+                                                    <h4 class="product-price-list">$<%= product[i].price %>
+                                                    </h4>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
                             </div>
-                            <% } else if (product[i].category_id==2) {%>
-                                <div class="flex-por-product">
-                                    <a href="/products/<%=product[i].id%>" style="text-decoration: none">
-                                        <div class="producto-de-list">
-                                            <div class="div-img-producto-de-list">
-                                                <img class="img-producto-de-list"
-                                                    src="/images/uploads/<%= product[i].image %>">
+                            <% } else {%>
+                                <% } %>
+                                    <% } %>
+                </div>
+                <h2 class="h2-product-list">Tablas Combinadas</h2>
+                <div class="line-product"></div>
+                <div class="general-productList">
+                    <% for (let i=0 ; i < product.length ; i++) { %>
+                        <% if (product[i].category_id==7) { %>
+                            <div class="flex-por-product">
+                                <a href="/products/<%=product[i].id%>" style="text-decoration: none">
+                                    <div class="producto-de-list">
+                                        <div class="div-img-producto-de-list">
+                                            <img class="img-producto-de-list"
+                                                src="/images/uploads/<%= product[i].image %>">
+                                        </div>
+                                        <div class="line-product"></div>
+                                        <div class="detalles-productList">
+                                            <div>
+                                                <h2 class="product-name-list">
+                                                    <%= product[i].name %>
+                                                </h2>
                                             </div>
-                                            <div class="line-product"></div>
-                                            <div class="detalles-productList">
-                                                <div>
-                                                    <h2 class="product-name-list">
-                                                        <%= product[i].name %>
-                                                    </h2>
+                                            <div class="div-price-icon">
+                                                <div class="div-price">
+                                                    <h4 class="product-price-list">$<%= product[i].price %>
+                                                    </h4>
                                                 </div>
-                                                <div class="div-price-icon">
-                                                    <div class="div-price">
-                                                        <h4 class="product-price-list">$<%= product[i].price %>
-                                                        </h4>
-                                                    </div>
-                                                    <div class="div-icon-productList">
-                                                        <i class="fas fa-cart-plus"></i>
-                                                    </div>
-                                                </div>
+
                                             </div>
                                         </div>
-                                    </a>
-                                </div>
-                                <% } else if (product[i].category_id==3) {%>
-                                    <div class="flex-por-product">
-                                        <a href="/products/<%=product[i].id%>" style="text-decoration: none">
-                                            <div class="producto-de-list">
-                                                <div class="div-img-producto-de-list">
-                                                    <img class="img-producto-de-list"
-                                                        src="/images/uploads/<%= product[i].image %>">
-                                                </div>
-                                                <div class="line-product"></div>
-                                                <div class="detalles-productList">
-                                                    <div>
-                                                        <h2 class="product-name-list">
-                                                            <%= product[i].name %>
-                                                        </h2>
-                                                    </div>
-                                                    <div class="div-price-icon">
-                                                        <div class="div-price">
-                                                            <h4 class="product-price-list">$<%= product[i].price %>
-                                                            </h4>
-                                                        </div>
-                                                        <div class="div-icon-productList">
-                                                            <i class="fas fa-cart-plus"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
                                     </div>
-                                    <% } else if (product[i].category_id==4) {%>
-                                        <div class="flex-por-product">
-                                            <a href="/products/<%=product[i].id%>" style="text-decoration: none">
-                                                <div class="producto-de-list">
-                                                    <div class="div-img-producto-de-list">
-                                                        <img class="img-producto-de-list"
-                                                            src="/images/uploads/<%= product[i].image %>">
-                                                    </div>
-                                                    <div class="line-product"></div>
-                                                    <div class="detalles-productList">
-                                                        <div>
-                                                            <h2 class="product-name-list">
-                                                                <%= product[i].name %>
-                                                            </h2>
-                                                        </div>
-                                                        <div class="div-price-icon">
-                                                            <div class="div-price">
-                                                                <h4 class="product-price-list">$<%= product[i].price %>
-                                                                </h4>
-                                                            </div>
-                                                            <div class="div-icon-productList">
-                                                                <i class="fas fa-cart-plus"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
+                                </a>
+                            </div>
+                            <% } else {%>
+                                <% } %>
+                                    <% } %>
+                </div>
+                <h2 class="h2-product-list">Veggie</h2>
+                <div class="line-product"></div>
+                <div class="general-productList">
+                    <% for (let i=0 ; i < product.length ; i++) { %>
+                        <% if (product[i].category_id==4) { %>
+                            <div class="flex-por-product">
+                                <a href="/products/<%=product[i].id%>" style="text-decoration: none">
+                                    <div class="producto-de-list">
+                                        <div class="div-img-producto-de-list">
+                                            <img class="img-producto-de-list"
+                                                src="/images/uploads/<%= product[i].image %>">
                                         </div>
-                                        <% } else if (product[i].category_id==5) {%>
-                                            <div class="flex-por-product">
-                                                <a href="/products/<%=product[i].id%>" style="text-decoration: none">
-                                                    <div class="producto-de-list">
-                                                        <div class="div-img-producto-de-list">
-                                                            <img class="img-producto-de-list"
-                                                                src="/images/uploads/<%= product[i].image %>">
-                                                        </div>
-                                                        <div class="line-product"></div>
-                                                        <div class="detalles-productList">
-                                                            <div>
-                                                                <h2 class="product-name-list">
-                                                                    <%= product[i].name %>
-                                                                </h2>
-                                                            </div>
-                                                            <div class="div-price-icon">
-                                                                <div class="div-price">
-                                                                    <h4 class="product-price-list">$<%= product[i].price
-                                                                            %>
-                                                                    </h4>
-                                                                </div>
-                                                                <div class="div-icon-productList">
-                                                                    <i class="fas fa-cart-plus"></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
+                                        <div class="line-product"></div>
+                                        <div class="detalles-productList">
+                                            <div>
+                                                <h2 class="product-name-list">
+                                                    <%= product[i].name %>
+                                                </h2>
                                             </div>
-                                            <% } else if (product[i].category_id==6) {%>
-                                                <div class="flex-por-product">
-                                                    <a href="/products/<%=product[i].id%>"
-                                                        style="text-decoration: none">
-                                                        <div class="producto-de-list">
-                                                            <div class="div-img-producto-de-list">
-                                                                <img class="img-producto-de-list"
-                                                                    src="/images/uploads/<%= product[i].image %>">
-                                                            </div>
-                                                            <div class="line-product"></div>
-                                                            <div class="detalles-productList">
-                                                                <div>
-                                                                    <h2 class="product-name-list">
-                                                                        <%= product[i].name %>
-                                                                    </h2>
-                                                                </div>
-                                                                <div class="div-price-icon">
-                                                                    <div class="div-price">
-                                                                        <h4 class="product-price-list">$<%=
-                                                                                product[i].price %>
-                                                                        </h4>
-                                                                    </div>
-                                                                    <div class="div-icon-productList">
-                                                                        <i class="fas fa-cart-plus"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
+                                            <div class="div-price-icon">
+                                                <div class="div-price">
+                                                    <h4 class="product-price-list">$<%= product[i].price %>
+                                                    </h4>
                                                 </div>
-                                                <% } else if (product[i].category_id==7) {%>
-                                                    <div class="flex-por-product">
-                                                        <a href="/products/<%=product[i].id%>"
-                                                            style="text-decoration: none">
-                                                            <div class="producto-de-list">
-                                                                <div class="div-img-producto-de-list">
-                                                                    <img class="img-producto-de-list"
-                                                                        src="/images/uploads/<%= product[i].image %>">
-                                                                </div>
-                                                                <div class="line-product"></div>
-                                                                <div class="detalles-productList">
-                                                                    <div>
-                                                                        <h2 class="product-name-list">
-                                                                            <%= product[i].name %>
-                                                                        </h2>
-                                                                    </div>
-                                                                    <div class="div-price-icon">
-                                                                        <div class="div-price">
-                                                                            <h4 class="product-price-list">$<%=
-                                                                                    product[i].price %>
-                                                                            </h4>
-                                                                        </div>
-                                                                        <div class="div-icon-productList">
-                                                                            <i class="fas fa-cart-plus"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <% } else if (product[i].category_id==8) {%>
-                                                        <div class="flex-por-product">
-                                                            <a href="/products/<%=product[i].id%>"
-                                                                style="text-decoration: none">
-                                                                <div class="producto-de-list">
-                                                                    <div class="div-img-producto-de-list">
-                                                                        <img class="img-producto-de-list"
-                                                                            src="/images/uploads/<%= product[i].image %>">
-                                                                    </div>
-                                                                    <div class="line-product"></div>
-                                                                    <div class="detalles-productList">
-                                                                        <div>
-                                                                            <h2 class="product-name-list">
-                                                                                <%= product[i].name %>
-                                                                            </h2>
-                                                                        </div>
-                                                                        <div class="div-price-icon">
-                                                                            <div class="div-price">
-                                                                                <h4 class="product-price-list">$<%=
-                                                                                        product[i].price %>
-                                                                                </h4>
-                                                                            </div>
-                                                                            <div class="div-icon-productList">
-                                                                                <i class="fas fa-cart-plus"></i>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                        <% } %>
-                                                            <% } %>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <% } else {%>
+                                <% } %>
+                                    <% } %>
+                </div>
+                <h2 class="h2-product-list">Menú Ejecutivo</h2>
+                <div class="line-product"></div>
+                <div class="general-productList">
+                    <% for (let i=0 ; i < product.length ; i++) { %>
+                        <% if (product[i].category_id==8) { %>
+                            <div class="flex-por-product">
+                                <a href="/products/<%=product[i].id%>" style="text-decoration: none">
+                                    <div class="producto-de-list">
+                                        <div class="div-img-producto-de-list">
+                                            <img class="img-producto-de-list"
+                                                src="/images/uploads/<%= product[i].image %>">
+                                        </div>
+                                        <div class="line-product"></div>
+                                        <div class="detalles-productList">
+                                            <div>
+                                                <h2 class="product-name-list">
+                                                    <%= product[i].name %>
+                                                </h2>
+                                            </div>
+                                            <div class="div-price-icon">
+                                                <div class="div-price">
+                                                    <h4 class="product-price-list">$<%= product[i].price %>
+                                                    </h4>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <% } else {%>
+                                <% } %>
+                                    <% } %>
                 </div>
 
             </main>

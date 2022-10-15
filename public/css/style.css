@@ -760,6 +760,9 @@ footer {
     background-color: black;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
+.producto-de-list:hover{
+    box-shadow: 0px 10px 30px rgb(100, 100, 100);
+}
 
 .img-producto-de-list {
     width: 100%;
@@ -878,6 +881,7 @@ footer {
 }
 
 .h1-productList {
+    font-size: 45px;
     color: white;
     text-align: center;
     position: static;
@@ -915,6 +919,11 @@ footer {
     height: 100%;
 
 }
+.h2-product-list{
+    color: white;
+    text-align: center;
+}
+
 @media (min-width: 500px) {
 
     .flex-por-product {
