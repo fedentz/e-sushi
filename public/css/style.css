@@ -923,7 +923,24 @@ footer {
     color: white;
     text-align: center;
 }
-
+.fa-edit{
+    color:#800000;
+    font-size: 30px;
+    border-radius: 50%;
+    padding: 7px;
+    position: relative;
+    top: 20px;
+    margin:5px;
+}
+.fa-trash{
+    margin:5px;
+    color:#800000;
+    font-size: 30px;
+    border-radius: 50%;
+    padding: 7px;
+    position: relative;
+    top: 20px;
+}
 @media (min-width: 500px) {
 
     .flex-por-product {
@@ -1076,15 +1093,16 @@ footer {
     }
 
     .flex-por-product {
-        display: block;
         width: 25%;
+        margin: 0;
     }
 
     .general-productList {
-        width: 100%;
+        width: 90%;
         display: flex;
         flex-wrap: wrap;
         gap: 7%;
+        margin-left: 10%;
     }
 
     .image-product {

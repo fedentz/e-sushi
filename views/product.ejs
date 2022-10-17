@@ -6,6 +6,7 @@
     <body class="background-image-productList">
         <%- include('./partials/header') %>
             <main class="main-product1">
+                <% if (locals.isLogged && locals.isAdmin == true) { %>
                 <div class="full-product">
                     <div>
                         <a href="/products"><i class="fas fa-chevron-circle-left"></i></a>
@@ -28,10 +29,42 @@
                         </p>
                         <div class="line-product"></div>
                         <div>
+                            <i class="fas fa-trash"></i>
                             <i class="fas fa-plus-circle"></i>
+                            <i class="fas fa-edit"></i>
                         </div>
                     </div>
                 </div>
+                <% } else { %>
+                    <div class="full-product">
+                        <div>
+                            <a href="/products"><i class="fas fa-chevron-circle-left"></i></a>
+                        </div>
+                        <div class="div-image-product">
+                            <img class="image-product" src="/images/uploads/<%= product.image %>">
+                        </div>
+                        <div class="line-product"></div>
+                        <div class="texto-product-desc">
+                            <h2 class="product-name1">
+                                <%= product.name %>
+                            </h2>
+                            <p>
+                                <em>
+                                    <%= product.description %>
+                                </em>
+                            </p>
+                            <h4>Precio:</h4>
+                            <p>$<%= product.price %>
+                            </p>
+                            <div class="line-product"></div>
+                            <div>
+                                <i class="fas fa-trash"></i>
+                                <i class="fas fa-plus-circle"></i>
+                                <i class="fas fa-edit"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
             </main>
 
 
