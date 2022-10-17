@@ -15,10 +15,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-DROP DATABASE IF EXISTS grupo8esushidb;
-CREATE DATABASE grupo8esushidb;
-USE grupo8esushidb;
-
 --
 -- Table structure for table `category`
 --
@@ -60,7 +56,7 @@ CREATE TABLE `product` (
   PRIMARY KEY (`id`),
   KEY `product_FK` (`category_id`),
   CONSTRAINT `product_FK` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +65,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (38,'Sashimi de Salmón (4 unidades)','4 unidades de Sashimi de Salmón.',1000,'producto-1665534829268.jpg',2),(39,'Sashimi de Atún Rojo (4 unidades)','4 unidades de Sashimi de atún rojo.',1200,'producto-1665534948699.jpg',2),(40,'Nigiri Veggie (4 unidades)','4 unidades de Nigiri de Palta',500,'producto-1665535122293.jpg',4),(41,'Geisha de Salmón (4 unidades)','6 unidades de Geisha de Salmón con palta y queso philadelphia.',850,'producto-1665535269564.jpg',3),(42,'Geisha de Salmón ahumado (4 unidades)','Geisha de Salmón ahumado con queso philadelphia y mango.',1000,'producto-1665535335622.png',3),(43,'New York Roll (8 unidades)','Roll de Salmón, palta y pepino (8 unidades).',1400,'producto-1665535380651.jpg',5),(44,'Ebi Roll (8 unidades)','Roll de Langostino Rebozado con queso philadelphia (8 unidades).',1300,'producto-1665535438563.jpg',5),(45,'Ceviche Roll (8 unidades)','Roll de Salmon marinado en leche de tigre coronado con ceviche de Salmón (8 unidades).',1750,'producto-1665535477722.jpg',5),(46,'California Roll (8 unidades)','Roll de Kanikama y palta cubierto de Salmón (8 unidades).',1500,'producto-1665535578859.jpg',5),(47,'Philadelphia Roll (8 unidades)','Roll de Salmón, palta y queso philadelphia (8 unidades).',1450,'producto-1665535623667.jpg',5),(48,'Langostinos rebozados (6 unidades)','Langostinos rebozados en panko con salsa de Maracuya y Mostaza & Miel.',1300,'producto-1665535709332.jpg',6),(49,'Harumaki (4 unidades)','4 unidades de Harumaki de Carne y verdura con salsa agridulce.',1000,'producto-1665535748948.jpg',6),(50,'Menú Ejecutivo ','Menú ejecutivo de 2 pasos con bebida incluida.\r\n-2 Harumaki.\r\n-14 Piezas (4 Philadelphia Roll, 4 NY,',2400,'producto-1665535857588.png',8),(51,'Combo Salmón (30 piezas)','Combo Salmon: 8 Philadelphia Roll, 8 NY Roll, 6 Geisha, 4 Sashimi de Salmón, 4 Nigiri de Salmón.',4800,'producto-1665535906178.jpg',7),(52,'Combo Mixto (50 piezas)','Combo Mixto: 8 Philadelphia Roll, 8 NY Roll, 8 Ebi Roll, 8 California Roll, 4 Nigiri de Salmón, 4 Ni',8000,'producto-1665535953962.jpg',7),(53,'Combo Veggie (15 piezas)','Combo Veggie de 15 piezas.',2000,'producto-1665536004348.jpg',4),(54,'Nigiri de Salmón (4 unidades)','4 unidades de Nigiri de Salmón.',800,'producto-1665534570035.jpg',1),(56,'Nigiri de pescado blanco (4 unidades)','4 unidades de Nigiri de Lenguado coronados con Lima.',750,'producto-1665536325818.jpg',1);
+INSERT INTO `product` VALUES (50,'Menú Ejecutivo ','Menú ejecutivo de 2 pasos con bebida incluida.\r\n-2 Harumaki.\r\n-14 Piezas (4 Philadelphia Roll, 4 NY,',2400,'producto-1665535857588.png',8),(53,'Combo Veggie (15 piezas)','Combo Veggie de 15 piezas.',2000,'producto-1665536004348.jpg',4),(58,'Langostinos rebozados ','Langostinos rebozados con salsa Maracuya.',1300,'producto-1665978605055.png',6),(59,'Harumaki','Harumaki de Carne y verduras con salsa agridulce (4 unidades)',1200,'producto-1665978690902.png',6),(60,'Gyozas de Cerdo','Gyozas de Cerdo con salsa de Soja',1250,'producto-1665979109496.png',6),(61,'Sashimi de Salmón','Sashimi de salmón (4 unidades)',1050,'producto-1665979254510.png',2),(62,'Sashimi de Atún Rojo','Sashimi de Atún Rojo (4 unidades)',1200,'producto-1665979290072.png',2),(63,'Sashimi de pescado blanco','Sashimi de pescado blanco (4 unidades)',950,'producto-1665979330991.png',2),(64,'Geisha de salmón','Geisha de salmón (4 unidades)',1100,'producto-1665979421358.png',3),(65,'Geisha de salmón ahumado','Geisha de salmón ahumado y mango (4 unidades)',1250,'producto-1665979482933.png',3),(66,'Geisha Tempura','Geishas de salmón tempura (4 unidades)',1150,'producto-1665979529070.png',3),(67,'Nigiri de salmón','Nigiri de Salmón (4 unidades)',900,'producto-1665979601647.png',1),(68,'Nigiri de Atún rojo','Nigiri de Atún rojo (4 unidades)',1100,'producto-1665979648937.png',1),(69,'Nigiri de Pescado Blanco ','Nigiri de Lenguado coronado con Lima (4 unidades)',800,'producto-1665979695406.png',1),(70,'California Roll','Roll de Kanikama y palta (8 unidades)',1250,'producto-1665979858208.png',5),(71,'Ebi Roll','Roll de palta, philadelphia y langostino (8 unidades)',1400,'producto-1665979918782.png',5),(72,'New York Roll','Roll de Salmón, palta y pepino (8 unidades)',1500,'producto-1665979965055.png',5),(73,'Ceviche Roll','Roll de salmon y atún marinados coronados con ceviche (8 unidades)',1800,'producto-1665980065096.png',5),(74,'Rainbow Roll','Roll de palta y philadelphia coronados con salmón, atún y lenguado (8 unidades)',1700,'producto-1665980137272.png',5),(75,'Osomaki de Salmón','Osomaki de Salmón (8 unidades)',1000,'producto-1665980284672.png',5),(76,'Combo Salmón','Combo Salmón de 30 piezas',4800,'producto-1665980423089.png',7),(77,'Combo Mixto','Combo Mixto de 50 piezas.',8000,'producto-1665980455760.png',7),(79,'Degustación de Nigiri','Degustación de Nigiri de 20 piezas',3000,'producto-1665980556344.png',7);
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,4 +138,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-13 17:05:08
+-- Dump completed on 2022-10-17 11:55:50
