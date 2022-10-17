@@ -1,27 +1,31 @@
 <header>
-   
+
     <main class="header-caja-madre">
-     <a href="/"><img class="logo" src="/images/logo-e-sushi.png" alt="Logo" ></a>               
-     <section class="navbar">
-         <ul style="list-style: none;">
-            <% if (locals.isLogged) { %>
-                <img src="../images/avatars/<%=locals.userLogged.image%>" alt="Admin" class="rounded-circle" width="40" style="border-radius: 100%">
-                <li><a href="/products/create">Crear producto</a></li>
-                <li><a href="/products">Menu</a></li>
-                <li><a href="/eventos">Eventos</a></li>
-                <li><a href="/user/profile">Perfil</a></li>
-            <% } else { %>
-                <li><a href="/products">Menu</a></li>
-                <li><a href="/eventos">Eventos</a></li>
-                <li><a href="/user/login">Iniciar Sesión</a></li>
-                <li><a href="/user/register">Registrarme</a></li>
+        <div class="img-navbar-logo">
+            <a href="/"><img class="logo" src="/images/logo-e-sushi.png" alt="Logo"></a>
+        </div>
+        <div>
+            <i class="fas fa-ellipsis-v"></i>
+        </div>
+        <div class="navbar">
+            <ul style="list-style: none;">
+                <% if (locals.isLogged) { %>
+                    <img src="../images/avatars/<%=locals.userLogged.image%>" alt="Admin" class="rounded-circle"
+                        width="40" style="border-radius: 100%">
+                    <li><a href="/products">Menu</a></li>
+                    <li><a href="/eventos">Eventos</a></li>
+                    <li><a href="/user/profile">Perfil</a></li>
+                    <% } else { %>
+                        <li><a href="/products">Menu</a></li>
+                        <li><a href="/eventos">Eventos</a></li>
+                        <li><a href="/user/login">Iniciar Sesión</a></li>
+                        <li><a href="/user/register">Registrarme</a></li>
 
-            <% } %>
-         </ul>
-     </section>
+                        <% } %>
+            </ul>
+        </div>
 
- </main>
- 
+    </main>
+
 
 </header>
-

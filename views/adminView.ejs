@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <%- include('./partials/head') %>
+
+<body id="body-index">
+    <%- include('./partials/header') %>
+    <main>
+
+        <div>
+            <h1 id="h1-admin">
+                Panel de administrador
+            </h1>
+        </div>
+        <div class="product-list-admin">
+            <% for (let i=0 ; i < product.length ; i++) { %> 
+                <a href="/products/<%=product[i].id%>/edit" style="text-decoration: none">
+                                <h2 class="product-name-list">
+                                    <%= product[i].name %>
+                                </h2>
+                </a>
+            <% } %>    
+        </div>
+        <div>
+            <a href="/products/create" style="text-decoration: none">
+                <button id="button-admin-products">
+                    Crear producto
+                </button>
+            </a>
+        </div>
+    </main>
+
+
+
+    <%- include('./partials/footer') %>
+    <%- include('./partials/boton-flotante') %>
+</body>
+</html>

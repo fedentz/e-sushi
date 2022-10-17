@@ -1,3 +1,5 @@
+let db = require('../database/models')
+
 
 const controlador = {
     index: (req, res) => {
@@ -20,6 +22,12 @@ const controlador = {
     },
     perfil: (req, res) => {
         res.render('perfil.ejs')
+    },
+    admin: (req,res) => {
+        db.Product.findAll()
+        .then(function (product) {
+            res.render('adminView.ejs', { product: product })
+        })
     }
 };
 

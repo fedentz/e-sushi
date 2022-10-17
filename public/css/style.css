@@ -7,7 +7,14 @@ body {
 html {
     position: relative;
 }
+.navbar{
+    display: none;
 
+}
+.fa-ellipsis-v{
+    font-size: 35px;
+    color: #800000;
+}
 main {
     margin-bottom: 150px;
     margin-top: 150px;
@@ -105,9 +112,7 @@ body {
     right: 40px;
 }
 
-.navbar {
-    display: none;
-}
+
 
 .blackbg .ver-mas-boton {
     background-color: #000000;
@@ -138,6 +143,8 @@ footer p {
     margin-left: 5%;
 
 }
+
+
 
 .social-ig {
     font-size: 2em;
@@ -540,8 +547,11 @@ footer {
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
+.img-index1{
+    margin-top: 50px;
+}
 #h1-home {
+    top: 10px;
     font-size: 18px;
 }
 
@@ -941,8 +951,38 @@ footer {
     position: relative;
     top: 20px;
 }
-@media (min-width: 500px) {
+#button-admin-products{
+    display: flex;
+    padding: 10px;
+    color: white;
+    background-color: #800000;
+    border: none;
+    border-radius: 15px;
+    margin: 40px auto 15px;
+}
+#button-admin-products:hover{
+box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
 
+.product-list-admin{
+    text-align: center;
+}
+
+.product-list-admin :hover {
+    transition: all 400ms;
+    color: red;
+ /*    border-bottom: red solid; */
+} 
+
+#h1-admin{
+    color: red;
+    text-align: center;
+    margin-bottom: 90px;
+}
+@media (min-width: 500px) {
+    .navbar{
+        display: none;
+    }
     .flex-por-product {
         width: 45%;
         margin: 0 auto;
@@ -966,7 +1006,9 @@ footer {
 }
 
 @media (min-width: 768px) {
-
+    .fa-ellipsis-v{
+        display: none;
+    }
     header {
         max-height: 180px;
     }
